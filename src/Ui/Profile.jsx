@@ -9,7 +9,7 @@ function Profile() {
           <div className="border-borderColor absolute bottom-0 left-[20px] right-[20px] top-0 border transition-all duration-500 ease-in-out"></div>
           <img
             className=" from-borderColor z-50 w-[484px] min-w-full bg-gradient-to-r"
-            src="./Profile.png"
+            src="./Profile3.png"
             alt=""
           />
 
