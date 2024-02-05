@@ -29,7 +29,7 @@
     left: 0;
     top: 0;
     animation: animate 4s ease 2s infinite forwards;
-    color: #44993B;
+    color: #44993b;
   }
   .BRACKET::after {
     position: absolute;
@@ -37,7 +37,7 @@
     right: 0;
     top: 0;
     animation: animate 4s ease 2s infinite forwards;
-    color: #44993B;
+    color: #44993b;
   }
 }
 
@@ -50,7 +50,7 @@
     opacity: 1;
   }
 
-  20%{
+  20% {
     opacity: 1;
   }
 
@@ -70,16 +70,31 @@
     opacity: 0;
   }
 
-  80%{
+  80% {
     opacity: 1;
-
   }
-  90%{
+  90% {
     opacity: 1;
-
   }
-  100%{
+  100% {
     opacity: 1;
-
   }
+}
+
+
+#Profile, #content{
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+@media (min-width: 1041px) {
+  .scrolled #Profile{
+    width: 32%;
+  }
+
+  .scrolled #content{
+    width: 68%;
+  }
+
 }
