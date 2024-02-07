@@ -31,7 +31,7 @@ function NavDrawer() {
           <TfiClose />
         </div>
       </div>
-      <div id="op" className="flex h-full w-full flex-col justify-between px-[16%] py-[100px] max-sm:px-5">
+      <div id="op" className="flex h-full w-full max-md:h-[100vh] flex-col justify-between px-[16%] py-[100px] max-sm:px-5">
         <NavList navList={navList} />
         <NavFooter />
       </div>
