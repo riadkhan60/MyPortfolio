@@ -6,6 +6,8 @@
 @layer base {
   * {
     font-family: "Jost", sans-serif;
+    scrollbar-color: rgb(0, 0, 0);
+    scrollbar-width: 9px;
   }
 }
 @layer components {
@@ -97,4 +99,31 @@
     width: 68%;
   }
 
+  .scrolled #drawer{
+    width: 32%;
+  }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1D1B19;
+  display: none;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff33;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #817d7d;
 }
