@@ -18,7 +18,7 @@ function NavDrawer() {
   return (
     <div
       id="drawer"
-      className="fixed right-0 top-0 z-50 md:h-[110%] h-full bg-[#181715] transition-all duration-500 ease-in-out max-lg:left-0 lg:right-0 lg:w-[44%]"
+      className="fixed right-0 top-0 z-50 md:h-[130vh] h-full bg-[#181715] transition-all duration-500 ease-in-out max-lg:left-0 lg:right-0 lg:w-[44%]"
     >
       <div onClick={onCloseMenu} className=" group absolute right-[40px] top-[40px] flex h-10 w-10 items-center justify-center border-subtitleColor hover:border ">
         <div className="  cursor-pointer text-4xl text-themeDarkshade transition-all duration-300 ease-in-out group-hover:text-xl group-hover:text-subtitleColor  ">
