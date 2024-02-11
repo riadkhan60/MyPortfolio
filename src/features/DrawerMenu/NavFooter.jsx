@@ -27,7 +27,7 @@ const navFooterItems = [
 
 function NavFooter() {
   return (
-    <div className=" pt-[50px]">
+    <div id="navFooter" className=" pt-[50px]">
       <div className=" mb-[30px]">
         <ul className=" mb-[10px] flex items-center gap-[10px]">
           {navFooterItems.map((item) => (

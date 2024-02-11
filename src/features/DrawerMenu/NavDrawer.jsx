@@ -17,21 +17,66 @@ const navList = [
 ];
 
 function NavDrawer() {
-  const { onCloseMenu } = useMenuContext();
-
   const container = useRef(null);
+  const { openMenu, onCloseMenu } = useMenuContext();
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        delay: 0.1
+      });
+      if (openMenu) {
+
+        tl.to(container.current, {
+          opacity: 1,
+          duration: 0.001
+        });
+        tl.to(container.current, {
+          transform: "translateX(0)",
+          duration: 0.7,
+          ease: "circ.out",
+        });
+
+        tl.from(".menuItem", {
+          transform: "translateX(15%)",
+          opacity: 0,
+          stagger: 0.1,
+        });
+
+        tl.from("#navFooter", {
+          transform: "translateY(20%)",
+          opacity: 0,
+        });
+      }
+      if (!openMenu) {
+        gsap.to(container.current, {
+          transform: "translateX(150%)",
+          duration: 0.9,
+          opacity: 0,
+        });
+      }
+    },
+    { dependencies: [openMenu] },
+  );
+
   return (
     <div
       ref={container}
       id="drawer"
-      className="fixed right-0 top-0 z-50 max-md:h-[130vh] h-full bg-[#181715] transition-all duration-500 ease-in-out max-lg:left-0 lg:right-0 lg:w-[44%]"
+      className=" fixed right-0 top-0 z-50  h-full translate-x-[150%] bg-[#181715] transition-[width] duration-500 ease-in-out max-lg:left-0 max-md:h-[130vh] lg:w-[44%]"
     >
-      <div onClick={onCloseMenu} className=" group absolute right-[40px] top-[40px] flex h-10 w-10 items-center justify-center border-subtitleColor hover:border ">
+      <div
+        onClick={onCloseMenu}
+        className=" group absolute right-[40px] top-[40px] flex h-10 w-10 items-center justify-center border-subtitleColor hover:border "
+      >
         <div className="  cursor-pointer text-4xl text-themeDarkshade transition-all duration-300 ease-in-out group-hover:text-xl group-hover:text-subtitleColor  ">
           <TfiClose />
         </div>
       </div>
-      <div id="op" className="flex h-full w-full max-md:h-[100vh] flex-col justify-between px-[16%] py-[100px] max-sm:px-5">
+      <div
+        id="op"
+        className="flex h-full w-full flex-col justify-between px-[16%] py-[100px] max-md:h-[100vh] max-sm:px-5"
+      >
         <NavList navList={navList} />
         <NavFooter />
       </div>
