@@ -64,7 +64,7 @@ function NavDrawer() {
     >
       <div
         onClick={onCloseMenu}
-        className=" group absolute right-[40px] top-[40px] flex h-10 w-10 items-center justify-center border-subtitleColor hover:border "
+        className=" cursor-pointer group absolute right-[40px] top-[40px] flex h-10 w-10 items-center justify-center border-subtitleColor hover:border "
       >
         <div className="  cursor-pointer text-4xl text-themeDarkshade transition-all duration-300 ease-in-out group-hover:text-xl group-hover:text-subtitleColor  ">
           <TfiClose />

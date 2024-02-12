@@ -13,7 +13,6 @@ function App() {
       <Profile />
       <div id="content" className="lg:w-[56%]">
         <Home />
-        <Home />
       </div>
       <MenuLayout />
     </div>
