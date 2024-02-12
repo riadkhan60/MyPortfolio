@@ -8,11 +8,11 @@ function MenuProvider({ children }) {
   const [openMenu, setOpenMenu] = useState(false);
 
   function onCloseMenu() {
-    setOpenMenu(false);
+    setOpenMenu('close');
   }
 
   function onOpenMenu() {
-    setOpenMenu(true);
+    setOpenMenu('open');
   }
 
   return (

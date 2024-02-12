@@ -18,46 +18,43 @@ const navList = [
 
 function NavDrawer() {
   const container = useRef(null);
+  const timeLine = useRef(null);
   const { openMenu, onCloseMenu } = useMenuContext();
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({
-        delay: 0.1
+      timeLine.current = gsap.timeline({
+        delay: 0.1,
+        paused: true
       });
-      if (openMenu) {
+      const tl = timeLine.current;
+      tl.to(container.current, {
+        transform: "translateX(0)",
+        duration: 0.5,
+        ease: "circ.out",
+      });
 
-        tl.to(container.current, {
-          opacity: 1,
-          duration: 0.001
-        });
-        tl.to(container.current, {
-          transform: "translateX(0)",
-          duration: 0.7,
-          ease: "circ.out",
-        });
+      tl.from(".menuItem", {
+        transform: "translateX(15%)",
+        opacity: 0,
+        stagger: 0.1,
+      });
 
-        tl.from(".menuItem", {
-          transform: "translateX(15%)",
-          opacity: 0,
-          stagger: 0.1,
-        });
-
-        tl.from("#navFooter", {
-          transform: "translateY(20%)",
-          opacity: 0,
-        });
-      }
-      if (!openMenu) {
-        gsap.to(container.current, {
-          transform: "translateX(150%)",
-          duration: 0.9,
-          opacity: 0,
-        });
-      }
+      tl.from("#navFooter", {
+        transform: "translateY(20%)",
+        opacity: 0,
+      });
     },
-    { dependencies: [openMenu] },
   );
+
+  useGSAP(() => {
+    if (openMenu === 'open') {
+      timeLine.current.timeScale(1).play();
+    }
+    if (openMenu === 'close') {
+      timeLine.current.timeScale(-3).reverse();
+    }
+  },{dependencies:[openMenu]})
 
   return (
     <div

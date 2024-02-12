@@ -10,13 +10,13 @@ function Overlay() {
 
   useGSAP(() => {
    
-    if (openMenu) {
+    if (openMenu === 'open') {
       gsap.to(ref.current, {
         transform: 'translateX(0)',
         duration: 0.8,
       })
     }
-    if (!openMenu) {
+    if (openMenu === 'close') {
       gsap.to(ref.current, {
         transform: 'translateX(-100%)',
         duration: 0.8,
