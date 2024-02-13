@@ -8,6 +8,7 @@ export default {
         themeWhite: "#DDDDDD",
         themeDarkshade: "#888888",
         borderColor: "#ffffff33",
+        borderColorHover: "#ffffff44",
         borderHover: "#44993b",
       },
 
