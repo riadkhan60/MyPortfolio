@@ -3,6 +3,7 @@ import {
   CssSVG,
   FigmaSVG,
   HtmlLogoSVG,
+  JavaScriptSVG,
   MaterialUiSVG,
   SassSVG,
   TailwindSVG,
@@ -32,9 +33,36 @@ function Skills() {
       .to(".lineOne", {
         opacity: 1,
         duration: 0.4,
-        width: "400px",
+        width: "360px",
       })
       .from(".logo-3", {
+        scale: 0.1,
+        opacity: 0,
+      })
+      .to(".lineTwo", {
+        opacity: 1,
+        duration: 0.4,
+        height: "100px",
+      })
+      .from(".logo-6", {
+        scale: 0.1,
+        opacity: 0,
+      })
+      .to(".lineThree", {
+        opacity: 1,
+        duration: 0.4,
+        width: "200px",
+      })
+      .from(".logo-5", {
+        scale: 0.1,
+        opacity: 0,
+      })
+      .to(".lineThree", {
+        opacity: 1,
+        duration: 0.4,
+        width: "400px",
+      })
+      .from(".logo-4", {
         scale: 0.1,
         opacity: 0,
       });
@@ -43,9 +71,7 @@ function Skills() {
     <div className=" after:absolute  after:left-0 after:top-[50%] after:h-[100%] after:w-[1px] after:translate-y-[-50%]  after:bg-borderColorHover">
       <div className=" ml-2 grid max-w-[500px] grid-cols-3  flex-wrap content-center items-center justify-items-center gap-2">
         <div className="relative">
-          <div className=" lineOne max-md:hidden absolute left-0 top-[50%] z-[-1] h-[2px] w-[0px] bg-slate-300 opacity-0">
-            <div className="absolute right-[-5px] top-0  h-4 w-4 translate-y-[-50%] rounded-full bg-green-300"></div>
-          </div>
+          <div className=" lineOne absolute left-[30px] top-[50%] z-[-1] h-[2px] w-[0px] bg-slate-300 opacity-0 max-md:hidden"></div>
           <div className=" logo-1">
             <HtmlLogoSVG />
           </div>
@@ -54,21 +80,22 @@ function Skills() {
           <CssSVG />
         </div>
         <div className="relative">
-          <div className=" lineTwo absolute left-0 top-[50%] z-[-1] h-[2px] w-[0px] bg-slate-300 opacity-0">
-            <div className="absolute right-[-5px] top-0  h-4 w-4 translate-y-[-50%] rounded-full bg-green-300"></div>
-          </div>
+          <div className=" lineTwo absolute right-[50%] top-[50%] z-[-1] h-[2px] w-[2px] translate-x-[-50%] bg-slate-300 opacity-0 max-md:hidden"></div>
           <div className="logo-3">
             <SassSVG />
           </div>
         </div>
         <div className="logo-4">
-          <TailwindSVG />
+          <JavaScriptSVG />
         </div>
         <div className="logo-5">
-          <FigmaSVG />
+          <TailwindSVG />
         </div>
-        <div className="logo-6">
-          <MaterialUiSVG />
+        <div className=" relative">
+          <div className=" lineThree opacity-1 absolute right-[10px]  top-[50%] z-[-1] h-[2px] w-[2px] bg-slate-300 opacity-0 max-md:hidden"></div>
+          <div className="logo-6">
+            <FigmaSVG />
+          </div>
         </div>
       </div>
     </div>
