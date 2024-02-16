@@ -27,9 +27,9 @@ function Skills() {
     tl.from(".logo-1", {
       scale: 0.1,
       opacity: 0,
+      delay: 0.4,
     })
       .to(".lineOne", {
-        delay: 0.4,
         opacity: 1,
         duration: 0.1,
         width: "200px",
