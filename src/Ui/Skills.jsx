@@ -198,15 +198,17 @@ function Skills() {
         <div className=" relative z-10">
           <div className=" lineEight absolute right-[50%] top-[50%] z-[-1] h-[2px] w-[2px] translate-x-[-50%] bg-subtitleColor opacity-0 max-md:hidden"></div>
           <div className="  logo-10">
-            <ReduxSVG />
+            <NodeSVG />
           </div>
         </div>
         <div className=" logo-11 z-10">
           <NextSVG />
         </div>
-        <div className=" logo-12">
+        <div className=" relative">
           <div className=" lineSeven opacity-1 absolute right-[10px] top-[50%] z-[-1]  h-[2px] w-[2px] bg-subtitleColor opacity-0 max-md:hidden"></div>
-          <NodeSVG />
+          <div className=" logo-12">
+            <ReduxSVG />
+          </div>
         </div>
         <div className="logo-13 z-20">
           <div className=" lineNine absolute left-[30px] top-[50%] z-[-1] h-[2px] w-[0px] bg-subtitleColor opacity-0 max-md:hidden"></div>
