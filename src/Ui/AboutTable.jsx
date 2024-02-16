@@ -3,11 +3,6 @@ import { myAge } from "../helper/helperFunctions";
 import AboutTableItem from "./AboutTableItem";
 
 function AboutTable() {
-  function downloadResume(e) {
-    e.target.download = "resume-md-samiul-alam-khan.pdf";
-    e.target.href = "./CV/MD-Samiul-Alam-Khan.pdf";
-    e.click();
-  }
 
   return (
     <div className=" mb-[126px] mt-[74px] flex justify-between max-xl:flex-col">
@@ -42,8 +37,8 @@ function AboutTable() {
       <div className=" ">
         <div className=" relative float-left clear-both flex w-full max-xl:mt-6 xl:ml-[70px]">
           <a
-            href=""
-            onClick={downloadResume}
+            download={"resume-md-samiul-alam-khan.pdf"}
+            href="./CV/MD-Samiul-Alam-Khan.pdf"
             className=" group flex h-[220px] w-[340px] max-w-full flex-col items-center justify-center border-2 border-[rgba(255,255,255,0.2)]  text-lg font-medium text-[#888] transition-all duration-300 hover:border-[rgba(255,255,255,0.4)] max-md:h-[120px] max-md:w-[250px]"
           >
             <span className=" text-7xl text-white transition-all duration-500 group-hover:translate-y-2">
