@@ -29,6 +29,7 @@ function Skills() {
       opacity: 0,
     })
       .to(".lineOne", {
+        delay: 0.4,
         opacity: 1,
         duration: 0.1,
         width: "200px",
