@@ -39,7 +39,7 @@ function About() {
         </AboutDetails.TabContent>
         <AboutDetails.TabContent title={"Skills"}>
           <div className=" skill-content flex flex-col gap-10 xl:flex-row ">
-            <div className=" relative min-w-[500px]">
+            <div className=" relative lg:min-w-[500px]">
               <Skills />
             </div>
             <div className=" h-[500px] bg-backgroundColorSecondary">
