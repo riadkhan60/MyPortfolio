@@ -114,6 +114,15 @@
   }
 }
 
+@media  (max-width: 1600px) {
+  .skill-content{
+    flex-direction: column !important;
+  }
+  .skill-content > *:last-child{
+    height: fit-content;
+  }
+}
+
 
 /* width */
 ::-webkit-scrollbar {

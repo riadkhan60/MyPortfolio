@@ -5,7 +5,7 @@ import { createContext, useContext, useRef, useState } from "react";
 const Context = createContext();
 
 function AboutDetails({ children }) {
-  const [activeTab, setActiveTab] = useState("Skills");
+  const [activeTab, setActiveTab] = useState("Experiences");
   return (
     <Context.Provider value={{ activeTab, setActiveTab }}>
       <div className=" mb-52">

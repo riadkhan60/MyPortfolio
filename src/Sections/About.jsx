@@ -1,20 +1,13 @@
 import AboutDetails from "../Ui/AboutDetails";
-import AboutDetailsCards, { AboutDetailsCard } from "../Ui/AboutDetailsCards";
 import AboutTable from "../Ui/AboutTable";
+import ExperinceCards from "../Ui/ExperinceCards";
 import SectionContainer from "../Ui/SectionContainer";
 import SectionInfo from "../Ui/SectionInfo";
 import Skills from "../Ui/Skills";
 
 const experiences = [
   {
-    company: "Perfect Computer",
-    date: "( 2021 — 2023 )",
-    title: "Web Developer",
-    description:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic adipiscinumquam quae alias cumque, corrupti ducimus vel sed animi reiciendis earum dolor totam asperiores optio? Impedit cumque neque aliquam iure.",
-  },
-  {
-    company: "Bird's Valley",
+    company: "Freelancing",
     date: "( 2021 — 2023 )",
     title: "Web Developer",
     description:
@@ -39,18 +32,20 @@ function About() {
       </SectionInfo>
       <AboutDetails>
         <AboutDetails.TabHeader
-          lists={["Skills", "Experiences", "Education"]}
+          lists={["Experiences", "Skills", "Education"]}
         />
         <AboutDetails.TabContent title={"Experiences"}>
-          <AboutDetailsCards
-            items={experiences}
-            render={(item) => (
-              <AboutDetailsCard item={item} key={item.company} />
-            )}
-          />
+          <ExperinceCards />
         </AboutDetails.TabContent>
         <AboutDetails.TabContent title={"Skills"}>
-         <Skills/>
+          <div className=" skill-content flex flex-col gap-10 xl:flex-row ">
+            <div className=" relative min-w-[500px]">
+              <Skills />
+            </div>
+            <div className=" h-[500px] bg-backgroundColorSecondary">
+              <ExperinceCards />
+            </div>
+          </div>
         </AboutDetails.TabContent>
       </AboutDetails>
     </SectionContainer>

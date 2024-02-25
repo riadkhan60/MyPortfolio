@@ -149,7 +149,7 @@ function Skills() {
   });
   return (
     <div className=" after:absolute  after:left-0 after:top-[50%] after:h-[100%] after:w-[1px] after:translate-y-[-50%]  after:bg-subtitleColor">
-      <div className=" ml-2 grid max-w-[500px] grid-cols-3  flex-wrap content-center items-center justify-items-center gap-2">
+      <div className=" ml-2 grid max-xl:w-[500px] max-w-[500px] grid-cols-3  flex-wrap content-center items-center justify-items-center gap-2">
         <div className="relative">
           <div className=" lineOne absolute left-[30px] top-[50%] z-[-1] h-[2px] w-[0px] bg-subtitleColor opacity-0 max-md:hidden"></div>
           <div className=" logo-1">
