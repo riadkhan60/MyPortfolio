@@ -114,7 +114,7 @@
   }
 }
 
-@media  (max-width: 1600px) {
+@media  (max-width: 1540px) {
   .skill-content{
     flex-direction: column !important;
   }
