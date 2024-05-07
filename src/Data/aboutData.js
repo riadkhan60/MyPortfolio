@@ -17,6 +17,7 @@ const TabDatas = {
         "I have invested a significant amount of time into learning JavaScript, delving deep into its intricacies, and experimenting with various concepts. Through this journey, I have acquired a wealth of knowledge and developed a profound understanding of JavaScript, including its interaction with the Document Object Model (DOM) and browser APIs. This comprehensive mastery of JavaScript has equipped me with the skills and confidence to tackle diverse challenges and create robust, efficient web applications. I am continually honing my expertise and exploring new horizons within the realm of JavaScript development.",
     },
   ],
+
 };
 
 export default TabDatas
