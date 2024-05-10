@@ -2,6 +2,7 @@ import TabDatas from "../Data/aboutData";
 import AboutDetails from "../Ui/AboutDetails";
 import AboutDetailsCards, { AboutDetailsCard } from "../Ui/AboutDetailsCards";
 import AboutTable from "../Ui/AboutTable";
+import EducationDetailsCards from "../Ui/EducationDetailsCards";
 import SectionContainer from "../Ui/SectionContainer";
 import SectionInfo from "../Ui/SectionInfo";
 import SkillContent from "../Ui/SkillContent";
@@ -35,7 +36,9 @@ function About() {
         <AboutDetails.TabContent title={"Skills"}>
           <SkillContent />
         </AboutDetails.TabContent>
-        <AboutDetails.TabContent title={"Education"}></AboutDetails.TabContent>
+        <AboutDetails.TabContent title={"Education"}>
+          <EducationDetailsCards/>
+        </AboutDetails.TabContent>
       </AboutDetails>
     </SectionContainer>
   );

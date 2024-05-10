@@ -26,10 +26,12 @@ function AboutTable() {
               link={"mailto:khanriad60@gmail.com"}
             />
             <AboutTableItem
-              title={"Facebook"}
-              value={"Riad Khan"}
+              title={"LinkedIn"}
+              value={"MD Samiul Alam Khan"}
               type={"link"}
-              link={"https://www.facebook.com/khan.riad.3/"}
+              link={
+                "https://www.linkedin.com/in/md-samiul-alam-khan-a2441b239/"
+              }
             />
           </tbody>
         </table>
