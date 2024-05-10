@@ -3,8 +3,8 @@ import TabDatas from "../Data/aboutData";
 function EducationDetailsCards() {
   return (
     <div>
-      <div className="grid grid-cols-2 gap-5">
-        <div className=" col-span-2 bg-backgroundColorSecondary px-[40px] py-[43px] text-themeDarkshade">
+      <div className="grid lg:grid-cols-2 gap-5">
+        <div className=" lg:col-span-2 bg-backgroundColorSecondary px-[40px] py-[43px] text-themeDarkshade">
           <h4 className=" mb-[17px] text-lg font-normal  uppercase text-white ">
             {TabDatas.education[0].subTitle}
           </h4>{" "}
