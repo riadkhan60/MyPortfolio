@@ -30,7 +30,7 @@ function About() {
         <AboutDetails.TabContent title={"Experiences"}>
           <AboutDetailsCards
             items={TabDatas.experinces}
-            render={(item) => <AboutDetailsCard item={item} />}
+            render={(item, index) => <AboutDetailsCard item={item} key={index} />}
           />
         </AboutDetails.TabContent>
         <AboutDetails.TabContent title={"Skills"}>

@@ -8,7 +8,7 @@ function AboutDetails({ children }) {
   const [activeTab, setActiveTab] = useState("Experiences");
   return (
     <Context.Provider value={{ activeTab, setActiveTab }}>
-      <div className=" mb-52">
+      <div className="">
       {children}
       </div>
     </Context.Provider>

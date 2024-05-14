@@ -1,5 +1,6 @@
 import About from "./Sections/About";
 import Home from "./Sections/Home";
+import Portfolios from "./Sections/Portfolios";
 import Profile from "./Ui/Profile";
 import MenuProvider from "./contexts/MenuProvider";
 import MenuLayout from "./features/DrawerMenu/MenuLayout";
@@ -15,6 +16,7 @@ function App() {
         <div id="content" className="lg:w-[56%]">
           <Home />
           <About />
+          <Portfolios/>
         </div>
         <MenuLayout />
       </div>
