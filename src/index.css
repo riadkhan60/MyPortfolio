@@ -155,3 +155,34 @@
   width: 100px;
   height: 100px;
 }
+
+.button-swiper{
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  /* bottom: 0; */
+ right: 0;
+  
+}
+
+.swiper-button-prev,
+.swiper-button-next
+{
+ top: unset !important;
+ bottom: unset !important;
+ right: unset !important;
+ left: unset !important;
+ width: auto !important;
+ position: relative !important;
+ background: none !important;
+ background-color: white;
+ color: white;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+  color: #987750;
+}

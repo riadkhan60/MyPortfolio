@@ -4,18 +4,16 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 function FeatureElements({ project }) {
   return (
     <div className=" flex flex-col justify-center gap-4">
-      <img
-        src={project.image}
-        className=" rounded-lg"
-        width={6000}
-        alt=""
-      />
+      <h2 className=" mt-6 text-[20px] font-normal text-themeWhite lg:text-2xl">
+        {project.name}
+      </h2>
+      <img src={project.image} className=" rounded-lg" width={6000} alt="" />
       <div className="">
-        <div className=" items-center justify-between  lg:flex">
-          <h6 className=" text-[16px] font-normal text-themeDarkshade max-lg:mb-3 lg:text-lg">
+        <div className=" items-center justify-between text-[15px] lg:flex  lg:text-[16px]">
+          <h6 className="  font-medium text-themeWhite  opacity-80 max-lg:mb-3 ">
             {project.techs}
           </h6>
-          <div className="flex gap-4 text-themeWhite">
+          <div className="flex gap-4 font-medium text-themeWhite opacity-80">
             <a
               className=" inline-flex items-center justify-center gap-1"
               href={project.github}
@@ -30,9 +28,6 @@ function FeatureElements({ project }) {
             </a>
           </div>
         </div>
-        <h2 className=" mt-6 text-[18px] font-normal text-themeWhite lg:text-2xl">
-          {project.name}
-        </h2>
       </div>
     </div>
   );

@@ -4,11 +4,19 @@ import { Swipe } from "../Ui/Swipper";
 
 function Portfolios() {
   return (
-    <div className="w-full text-white ">
+    <div className=" w-full text-white">
       <SectionContainer>
         <SectionInfo>
           <SectionInfo.Subtitle>PORTFOLIO</SectionInfo.Subtitle>
-          <SectionInfo.Title>Featured Projects</SectionInfo.Title>
+          <div className=" relative">
+            <SectionInfo.Title>Featured Projects</SectionInfo.Title>
+            <div>
+              <div className=" button-swiper text-white">
+                <div className="swiper-button-prev"></div>
+                <div className="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
         </SectionInfo>
         <Swipe />
       </SectionContainer>
