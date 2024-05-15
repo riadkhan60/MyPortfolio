@@ -161,11 +161,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 10%;
-  /* bottom: 0; */
- right: 0;
-  
+  padding-top: 10px;
 }
 
 .swiper-button-prev,
@@ -184,5 +180,8 @@
 
 .swiper-button-prev::after,
 .swiper-button-next::after{
+  content: '-';
   color: #987750;
+  scale: 0.6;
+  transform: translateY(50%);
 }

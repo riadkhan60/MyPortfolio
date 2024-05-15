@@ -8,7 +8,7 @@ function Portfolios() {
       <SectionContainer>
         <SectionInfo>
           <SectionInfo.Subtitle>PORTFOLIO</SectionInfo.Subtitle>
-          <div className=" relative">
+          <div className=" flex justify-between items-start">
             <SectionInfo.Title>Featured Projects</SectionInfo.Title>
             <div>
               <div className=" button-swiper text-white">
