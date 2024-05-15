@@ -42,7 +42,7 @@ const portfoliosData = [
   },
   {
     id: 6,
-    name: "Job Portal",
+    name: "Drawing App",
     live: "https://drawingapp60.netlify.app/",
     github: "https://github.com/riadkhan60/Drawing-App",
     techs: "Web Tool",

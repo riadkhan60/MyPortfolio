@@ -3,7 +3,9 @@ import Home from "./Sections/Home";
 import Portfolios from "./Sections/Portfolios";
 import Profile from "./Ui/Profile";
 import MenuProvider from "./contexts/MenuProvider";
+import ModalProvider from "./contexts/ModalProvider";
 import MenuLayout from "./features/DrawerMenu/MenuLayout";
+import PortfolioModal from "./features/Modal/PortfolioModal";
 import useScrollAnimation from "./hooks/useScrollAnimation";
 
 function App() {
@@ -11,15 +13,18 @@ function App() {
 
   return (
     <MenuProvider>
-      <div className=" h-full w-[100%] transition-all duration-0 ease-in-out max-lg:block">
-        <Profile />
-        <div id="content" className="lg:w-[56%]">
-          <Home />
-          <About />
-          <Portfolios/>
+      <ModalProvider>
+        <div className=" h-full w-[100%] transition-all duration-0 ease-in-out max-lg:block">
+          <Profile />
+          <div id="content" className="lg:w-[56%]">
+            <Home />
+            <About />
+            <Portfolios />
+          </div>
+          <MenuLayout />
+          <PortfolioModal />
         </div>
-        <MenuLayout />
-      </div>
+      </ModalProvider>
     </MenuProvider>
   );
 }
