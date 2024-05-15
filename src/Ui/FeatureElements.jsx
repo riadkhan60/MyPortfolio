@@ -7,7 +7,7 @@ function FeatureElements({ project }) {
       <h2 className=" mt-6 text-[20px] font-normal text-themeWhite lg:text-2xl">
         {project.name}
       </h2>
-      <img src={project.image} className=" rounded-lg" width={6000} alt="" />
+      <img src={project.image} className=" rounded-lg transition-all ease-in-out duration-300  hover:opacity-80" width={6000} alt="" />
       <div className="">
         <div className=" items-center justify-between text-[15px] lg:flex  lg:text-[16px]">
           <h6 className="  font-medium text-themeWhite  opacity-80 max-lg:mb-3 ">
@@ -15,13 +15,13 @@ function FeatureElements({ project }) {
           </h6>
           <div className="flex gap-4 font-medium text-themeWhite opacity-80">
             <a
-              className=" inline-flex items-center justify-center gap-1"
+              className=" inline-flex items-center justify-center gap-1  hover:text-white"
               href={project.github}
             >
               Github <FaGithub />
             </a>
             <a
-              className=" inline-flex items-center justify-center gap-1"
+              className=" inline-flex items-center justify-center gap-1 hover:text-white"
               href={project.live}
             >
               Live <FaExternalLinkAlt />

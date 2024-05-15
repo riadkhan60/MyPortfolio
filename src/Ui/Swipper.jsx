@@ -23,6 +23,7 @@ export function Swipe() {
         spaceBetween={40}
         autoplay={{
           delay: 2500,
+          pauseOnMouseEnter: true,
           disableOnInteraction: false,
         }}
         pagination={{
