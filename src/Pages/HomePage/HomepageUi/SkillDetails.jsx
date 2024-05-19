@@ -1,4 +1,4 @@
-import TabDatas from "../Data/aboutData";
+import TabDatas from "../../../Data/aboutData";
 
 function SkillDetails() {
   return (

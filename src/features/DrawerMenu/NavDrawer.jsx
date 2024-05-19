@@ -1,10 +1,11 @@
 import { useGSAP } from "@gsap/react";
-import useMenuContext from "../../contexts/useMenuContext";
+
 import NavFooter from "./NavFooter";
 import NavList from "./NavList";
 import { TfiClose } from "react-icons/tfi";
 import { useRef } from "react";
 import gsap from "gsap";
+import useMenuContext from "../../contexts/MenuContext/useMenuContext";
 
 const navList = [
   "Home",

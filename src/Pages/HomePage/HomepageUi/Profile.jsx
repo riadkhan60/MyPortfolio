@@ -1,4 +1,5 @@
-import NavMenu from "../features/DrawerMenu/NavMenu";
+
+import NavMenu from "../../../features/DrawerMenu/NavMenu";
 import TypeWrite from "./TypeWrite";
 
 function Profile() {

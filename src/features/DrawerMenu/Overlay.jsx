@@ -1,7 +1,8 @@
 import { useGSAP } from "@gsap/react";
-import useMenuContext from "../contexts/useMenuContext";
+
 import { useRef } from "react";
 import gsap from "gsap";
+import useMenuContext from "../../contexts/MenuContext/useMenuContext";
 
 
 function Overlay() {

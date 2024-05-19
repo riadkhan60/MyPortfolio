@@ -1,5 +1,6 @@
 import { HiBars3 } from "react-icons/hi2";
-import useMenuContext from "../../contexts/useMenuContext";
+import useMenuContext from "../../contexts/MenuContext/useMenuContext";
+
 
 function NavMenu() {
   const { onOpenMenu } = useMenuContext();

@@ -1,6 +1,7 @@
 import { PiDownloadSimpleThin } from "react-icons/pi";
-import { myAge } from "../helper/helperFunctions";
+
 import AboutTableItem from "./AboutTableItem";
+import { myAge } from "../../../helper/helperFunctions";
 
 function AboutTable() {
 

@@ -1,6 +1,6 @@
 import { TfiClose } from "react-icons/tfi";
 import portfoliosData from "../../Data/ProtfolioData";
-import useModalContext from "../../contexts/useModalContext";
+import useModalContext from "../../contexts/PortfolioModalContext/useModalContext";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -18,7 +18,6 @@ function ModalContent() {
         transform: "translateY(-100px)",
         duration: 0.6,
       });
-      
     },
     { dependencies: [openModal] },
   );

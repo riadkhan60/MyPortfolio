@@ -1,6 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import useModalContext from "../contexts/useModalContext";
+import useModalContext from "../../../contexts/PortfolioModalContext/useModalContext";
+
 
 function FeatureElements({ project }) {
   const { setOpenModal } = useModalContext();

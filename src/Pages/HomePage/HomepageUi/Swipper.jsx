@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import FeatureElements from "./FeatureElements";
-import portfoliosData from "../Data/ProtfolioData";
+import portfoliosData from "../../../Data/ProtfolioData";
 
 export function Swipe() {
   return (

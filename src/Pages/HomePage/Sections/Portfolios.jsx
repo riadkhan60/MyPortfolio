@@ -1,6 +1,7 @@
-import SectionContainer from "../Ui/SectionContainer";
-import SectionInfo from "../Ui/SectionInfo";
-import { Swipe } from "../Ui/Swipper";
+import SectionContainer from "../HomepageUi/SectionContainer";
+import SectionInfo from "../HomepageUi/SectionInfo";
+import { Swipe } from "../HomepageUi/Swipper";
+
 
 function Portfolios() {
   return (

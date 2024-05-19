@@ -1,4 +1,4 @@
-import useModalContext from "../../contexts/useModalContext";
+import useModalContext from "../../contexts/PortfolioModalContext/useModalContext";
 import ModalContent from "./ModalContent";
 
 function PortfolioModal() {

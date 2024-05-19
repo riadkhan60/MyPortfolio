@@ -1,5 +1,6 @@
-import HomeContent from "../Ui/HomeContent";
-import SectionContainer from "../Ui/SectionContainer";
+import HomeContent from "../HomepageUi/HomeContent";
+import SectionContainer from "../HomepageUi/SectionContainer";
+
 
 function Home() {
   return (
