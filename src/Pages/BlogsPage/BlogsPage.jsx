@@ -1,5 +1,7 @@
 import MenuLayout from "../../features/DrawerMenu/MenuLayout";
 import NavMenu from "../../features/DrawerMenu/NavMenu";
+import BlogsGrid from "./Sections/BlogsGrid";
+import BlogsHeading from "./Sections/BlogsHeading";
 
 function BlogsPage() {
   return (
@@ -9,6 +11,10 @@ function BlogsPage() {
           <NavMenu />
           <MenuLayout />
         </div>
+      </div>
+      <div >
+        <BlogsHeading />
+        <BlogsGrid />
       </div>
     </div>
   );

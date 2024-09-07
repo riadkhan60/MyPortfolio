@@ -29,6 +29,7 @@ export function Swipe() {
         pagination={{
           clickable: true,
         }}
+        speed={1000}
         breakpoints={{
           100: {
             slidesPerView: 1,
@@ -60,7 +61,6 @@ export function Swipe() {
           );
         })}
       </Swiper>
-      
     </div>
   );
 }
