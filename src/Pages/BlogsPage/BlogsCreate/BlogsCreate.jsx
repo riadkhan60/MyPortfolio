@@ -27,27 +27,30 @@ const toolbarOptions = [
 
 function BlogsCreate() {
   const [value, setValue] = useState("");
-  console.log(value);
+  const [error, setError] = useState(null);
 
   return (
     <div>
-      <div className="w-full px-[15px] max-md:mt-2 sm:px-[20px] lg:px-[12%]">
-        <h1 className="my-5  text-center text-3xl text-themeWhite">
-          Write Your Blog
-        </h1>
-        <BlogsHeading />
-        <div>
-          <ReactQuill
-            modules={{
-              toolbar: toolbarOptions,
-            }}
-            style={{
-              color: "white",
-            }}
-            theme="snow"
-            value={value}
-            onChange={setValue}
-          />
+      <div className="relative">
+        <div className=" w-full px-[15px] max-md:mt-2 sm:px-[20px] lg:px-[12%]">
+          <h1 className="my-5  text-center text-3xl text-themeWhite">
+            Write Your Blog
+          </h1>
+          <BlogsHeading setError={setError} value={value} />
+          {error && <p className="my-5 text-red-500">{error}</p>}
+          <div>
+            <ReactQuill
+              modules={{
+                toolbar: toolbarOptions,
+              }}
+              style={{
+                color: "white",
+              }}
+              theme="snow"
+              value={value}
+              onChange={setValue}
+            />
+          </div>
         </div>
       </div>
     </div>

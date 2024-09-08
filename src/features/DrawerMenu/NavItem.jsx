@@ -16,7 +16,6 @@ function NavItem({ element }) {
           onClick={returnHomeFunc}
           to={`/${element.toLowerCase()}`}
           className=" text-3xl font-normal leading-[1.3] text-[#ddd] max-sm:text-xl"
-          href="#about"
         >
           {element}
         </NavLink>
@@ -28,7 +27,7 @@ function NavItem({ element }) {
       <a
         onClick={returnHomeFunc}
         className=" text-3xl font-normal leading-[1.3] text-[#ddd] max-sm:text-xl"
-        href="#about"
+        href={`#${element.toLowerCase()}`}
       >
         {element}
       </a>

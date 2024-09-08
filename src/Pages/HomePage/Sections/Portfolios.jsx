@@ -5,7 +5,7 @@ import { Swipe } from "../HomepageUi/Swipper";
 
 function Portfolios() {
   return (
-    <div className=" w-full text-white">
+    <div id="portfolio" className=" w-full text-white">
       <SectionContainer>
         <SectionInfo>
           <SectionInfo.Subtitle>PORTFOLIO</SectionInfo.Subtitle>
@@ -13,8 +13,8 @@ function Portfolios() {
             <SectionInfo.Title>Featured Projects</SectionInfo.Title>
             <div>
               <div className=" button-swiper text-white">
-                <div className="swiper-button-prev"></div>
-                <div className="swiper-button-next"></div>
+                <div className="swiper-button-prev-portfolio swiper-button-prev"></div>
+                <div className="swiper-button-next-portfolio swiper-button-next"></div>
               </div>
             </div>
           </div>

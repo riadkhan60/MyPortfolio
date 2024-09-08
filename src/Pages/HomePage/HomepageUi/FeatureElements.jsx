@@ -6,11 +6,20 @@ import useModalContext from "../../../contexts/PortfolioModalContext/useModalCon
 function FeatureElements({ project }) {
   const { setOpenModal } = useModalContext();
   return (
-    <div className=" flex flex-col justify-center gap-4">
-      <h2 className=" mt-6 text-[20px] font-normal text-themeWhite lg:text-2xl">
+    <div className=" flex cursor-pointer flex-col justify-center gap-4">
+      <h2
+        onClick={() => setOpenModal(project.id)}
+        className=" mt-6 text-[20px] font-normal text-themeWhite lg:text-2xl"
+      >
         {project.name}
       </h2>
-      <img onClick={() => setOpenModal(project.id)} src={project.image} className=" rounded-lg transition-all ease-in-out duration-300  hover:opacity-80" width={6000} alt="" />
+      <img
+        onClick={() => setOpenModal(project.id)}
+        src={project.image}
+        className=" rounded-lg transition-all duration-300 ease-in-out  hover:opacity-80"
+        width={6000}
+        alt=""
+      />
       <div className="">
         <div className=" items-center justify-between text-[15px] lg:flex  lg:text-[16px]">
           <h6 className="  font-medium text-themeWhite  opacity-80 max-lg:mb-3 ">

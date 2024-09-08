@@ -6,20 +6,27 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import required modules
-import { Pagination, Autoplay, Navigation } from "swiper/modules";
-import FeatureElements from "./FeatureElements";
-import portfoliosData from "../../../Data/ProtfolioData";
+import customerReviewsData from "../../../../Data/CustomerReviewsData";
 
-export function Swipe() {
+// import required modules
+import {  Autoplay, Navigation } from "swiper/modules";
+import CustomerReviewCard from "./CustomerReviewCard";
+
+export function CustomerReviews() {
   return (
-    <div className="">
+    <div className="mt-20">
+      <div className="mb-12">
+        <div className=" button-swiper text-white">
+          <div className="swiper-button-prev-review swiper-button-prev"></div>
+          <div className="swiper-button-next-review swiper-button-next"></div>
+        </div>
+      </div>
       <Swiper
         navigation={{
-          nextEl: ".swiper-button-prev-portfolio",
-          prevEl: ".swiper-button-next-portfolio",
+          nextEl: ".swiper-button-next-review",
+          prevEl: ".swiper-button-prev-review",
         }}
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={40}
         autoplay={{
           delay: 2500,
@@ -36,16 +43,16 @@ export function Swipe() {
           },
 
           370: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
           },
           1540: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 40,
           },
         }}
-        modules={[Pagination, Autoplay, Navigation]}
-        className="mySwiper h-[300px] md:h-[400px] xl:h-[300px]"
+        modules={[Autoplay, Navigation]}
+        className="mySwiper  "
         style={{
           "--swiper-navigation-color": "#962828",
           "--swiper-pagination-color": "#44993b",
@@ -53,13 +60,15 @@ export function Swipe() {
           "--swiper-pagination-bullet-inactive-opacity": "0.6",
         }}
       >
-        {portfoliosData.map((project) => {
-          return (
-            <SwiperSlide key={project.id}>
-              <FeatureElements project={project} />
-            </SwiperSlide>
-          );
-        })}
+        {
+          customerReviewsData.map((review) => {
+            return (
+              <SwiperSlide key={review.id}>
+                <CustomerReviewCard review={review} />
+              </SwiperSlide>
+            );
+          })
+        }
       </Swiper>
     </div>
   );

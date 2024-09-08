@@ -29,7 +29,7 @@ function BlogsList() {
     <div ref={ref} className="">
       <div className="  grid gap-[50px] max-lg:gap-6 sm:grid-cols-2">
         {Array.from({ length: showFullList ? 6 : 2 }).map((_, index) => (
-          <BlogsItem key={index} />
+          <BlogsItem key={index}  />
         ))}
       </div>
       <button

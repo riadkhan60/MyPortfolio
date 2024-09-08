@@ -165,7 +165,9 @@
 }
 
 .swiper-button-prev,
-.swiper-button-next
+.swiper-button-next,
+.swiper-button-prev-review,
+.swiper-button-next-review
 {
  top: unset !important;
  bottom: unset !important;
@@ -179,13 +181,21 @@
 }
 
 .swiper-button-prev::after,
-.swiper-button-next::after{
+.swiper-button-next::after
+
+{
   content: '-';
   color: #987750;
   scale: 0.6;
   transform: translateY(50%);
 }
-
+.swiper-button-prev-review::after,
+.swiper-button-next-review::after{
+  content: '-';
+  color: #987750;
+  scale: 0.6;
+  transform: translateY(50%);
+}
 ::-webkit-file-upload-button{
   background-color: transparent;
   border: 1px solid #44993b;

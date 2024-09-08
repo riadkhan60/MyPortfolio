@@ -6,6 +6,8 @@ const portfoliosData = [
     github: "https://github.com/riadkhan60/birdsValleyReact",
     techs: "Portfolio Website",
     image: "./Portfolios/BirdsValley.png",
+    TechUsed: ["React", "React Router", "Tailwind"],
+    description: "A Website for Birds Valley ",
   },
 
   {
@@ -15,6 +17,9 @@ const portfoliosData = [
     github: "https://github.com/riadkhan60/invoice-builder",
     techs: "Web Tool",
     image: "./Portfolios/InvoiceBuilder.png",
+    TechUsed: ["React", "React Router", "Tailwind", "daisy Ui", "React Pdf"],
+    description:
+      "Invoice Builder is a web tool where you can create invoices. dynamically ",
   },
   {
     id: 3,
@@ -23,6 +28,17 @@ const portfoliosData = [
     github: "",
     techs: "Portfolio Website",
     image: "./Portfolios/myportfolio.png",
+    TechUsed: [
+      "React",
+      "React Router",
+      "Tailwind",
+      "GSAP",
+      "Node",
+      "Express",
+      "MongoDB",
+    ],
+    description:
+      "My first portfolio website. I build it using React, React Router, Tailwind, GSAP, Node, Express, MongoDB.",
   },
   {
     id: 4,
@@ -31,6 +47,8 @@ const portfoliosData = [
     github: "https://github.com/riadkhan60/TodoApp",
     techs: "Web Tool",
     image: "./Portfolios/Todo.png",
+    TechUsed: ["JavaScript", "MVC Architecture"],
+    description: "My Todo App. I build it using JavaScript, MVC Architecture.",
   },
   {
     id: 5,
@@ -39,6 +57,15 @@ const portfoliosData = [
     github: "https://github.com/riadkhan60/job-poratal",
     techs: "Web Service",
     image: "./Portfolios/Jobportal.png",
+    TechUsed: [
+      "React",
+      "React Router",
+      "React Query",
+      "Material Ui",
+      "Node",
+      "Express",
+    ],
+    description: "Job Portal. I build it using React, React Router, React Query, Material Ui, Node, Express.",
   },
   {
     id: 6,
@@ -47,8 +74,9 @@ const portfoliosData = [
     github: "https://github.com/riadkhan60/Drawing-App",
     techs: "Web Tool",
     image: "./Portfolios/DrawingApp.png",
+    TechUsed: ["JavaScript", "Canvas"],
+    description: "Drawing App. I build it using JavaScript, Canvas.",
   },
 ];
 
-
-export default portfoliosData
+export default portfoliosData;

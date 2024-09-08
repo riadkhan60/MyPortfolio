@@ -4,10 +4,10 @@ import PortfolioModal from "../../features/PortfolioModal/PortfolioModal";
 import Profile from "./HomepageUi/Profile";
 import About from "./Sections/About";
 import BlogsSection from "./Sections/BlogsSection";
+import Customers from "./Sections/Customers";
 import Home from "./Sections/Home";
 import Portfolios from "./Sections/Portfolios";
-
-
+import Services from "./Sections/Services";
 
 function HomePage() {
   return (
@@ -18,6 +18,8 @@ function HomePage() {
           <Home />
           <About />
           <Portfolios />
+          <Services />
+          <Customers />
           <BlogsSection />
         </div>
         <MenuLayout />

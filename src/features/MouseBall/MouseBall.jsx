@@ -21,10 +21,10 @@ function MouseBall() {
       settings.mouseY = event.clientY;
 
       if (window.getComputedStyle(event.target).cursor === "pointer") {
-        console.log("Cursor is a pointer");
+
         settings.cursorStyle = "pointer";
       } else {
-        console.log("Cursor is not a pointer");
+
         settings.cursorStyle = "normal";
       }
     };
