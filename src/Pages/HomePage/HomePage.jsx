@@ -1,9 +1,11 @@
 import ModalProvider from "../../contexts/PortfolioModalContext/ModalProvider";
 import MenuLayout from "../../features/DrawerMenu/MenuLayout";
+import Footer from "../../features/Footer/Footer";
 import PortfolioModal from "../../features/PortfolioModal/PortfolioModal";
 import Profile from "./HomepageUi/Profile";
 import About from "./Sections/About";
-import BlogsSection from "./Sections/BlogsSection";
+// import BlogsSection from "./Sections/BlogsSection";
+import ContactMeSection from "./Sections/ContactMeSection";
 import Customers from "./Sections/Customers";
 import Home from "./Sections/Home";
 import Portfolios from "./Sections/Portfolios";
@@ -20,7 +22,9 @@ function HomePage() {
           <Portfolios />
           <Services />
           <Customers />
-          <BlogsSection />
+          {/* <BlogsSection /> */}
+          <ContactMeSection />
+          <Footer />
         </div>
         <MenuLayout />
         <PortfolioModal />

@@ -1,0 +1,50 @@
+.entryarea {
+  position: relative;
+  height: 60px;
+  line-height: 70px;
+}
+
+.textArea{
+  position: relative;
+  height: 200px !important;
+  line-height: 1.1 !important;
+}
+.contactMeInput {
+  position: absolute;
+  width: 100%;
+  outline: none !important;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 20px;
+  padding-right: 20px;
+  background: transparent !important;
+  transition: 0.1s ease;
+  z-index: 1000; /* Adjusted */
+}
+
+
+.labelline {
+  position: absolute;
+  font-size: 22px;
+  color: #888;
+  padding: 0 15px;
+  margin: 0 20px;
+  background-color: #1D1B19;
+  transition: 0.2s ease;
+}
+.contactMeInput:focus,
+.contactMeInput.is-valid,
+.contactMeInput:valid {
+  border: 1px solid #987750;
+  color: #ccc;
+}
+
+.contactMeInput:focus + .labelline,
+.contactMeInput.is-valid + .labelline,
+.contactMeInput:valid + .labelline {
+  color: #987750;
+  height: 30px;
+  line-height: 30px;
+  transform: translate(-10px, -16px) scale(0.88);
+  z-index: 1111;
+}
