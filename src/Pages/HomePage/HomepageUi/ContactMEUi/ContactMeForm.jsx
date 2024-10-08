@@ -1,33 +1,32 @@
 import ContactMeInput from "./ContactMeInput";
 import { useForm } from "react-hook-form";
 import ContactMeTextArea from "./ContactMeTextArea";
-import { useState } from "react";
 import ContactMeItems from "./ContactMeItems";
+import useFormSubmit from "../../../../hooks/useFormSubmit";
 
 function ContactMeForm() {
-  const [submited, setSubmited] = useState(false);
   const {
     register,
     handleSubmit,
     reset,
     // formState: { errors },
   } = useForm();
+  const { state, postForm } = useFormSubmit(reset);
 
-
-  const onSubmit = (data, e) => {
-    console.log(data);
-    console.log(e)
-    setSubmited(true);
-    setTimeout(() => {
-      setSubmited(false);
-      reset();
-    }, 1000);
+  const onSubmit = (data) => {
+    postForm(data);
   };
+
   return (
     <div>
-      {submited && (
+      {state === "success" && (
         <div className="mb-6 break-words  text-lg font-medium text-[#009140]">
           Your message has been received, we will contact you soon.
+        </div>
+      )}
+      {state === "error" && (
+        <div className="mb-6 break-words  text-lg font-medium text-[#f0593e]">
+          Something went wrong, Please try again.
         </div>
       )}
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -66,13 +65,17 @@ function ContactMeForm() {
           />
         </div>
         <div className="mt-[120px] flex w-full items-center justify-center border-2 border-[#ffffff33] p-[30px] text-[#ddd]">
-          <button className="text-[18px] w-full h-full font-bold uppercase" type="submit">
+          <button
+            className="h-full w-full text-[18px] font-bold uppercase"
+            type="submit"
+            disabled={state === "submitting"}
+          >
             Send Message
           </button>
         </div>
       </form>
 
-      <ContactMeItems/>
+      <ContactMeItems />
     </div>
   );
 }

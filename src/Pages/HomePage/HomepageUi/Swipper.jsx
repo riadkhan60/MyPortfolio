@@ -16,8 +16,8 @@ export function Swipe() {
     <div className="">
       <Swiper
         navigation={{
-          nextEl: ".swiper-button-prev-portfolio",
-          prevEl: ".swiper-button-next-portfolio",
+          nextEl: ".swiper-button-next-portfolio",
+          prevEl: ".swiper-button-prev-portfolio",
         }}
         slidesPerView={3}
         spaceBetween={40}

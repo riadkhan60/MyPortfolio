@@ -20,15 +20,18 @@ function Profile() {
           <TypeWrite />
         </div>
         <div>
-          <a
+          <p
             href="#contact"
             className=" inline-flex items-center justify-center gap-3 text-center"
           >
             <span className="h-[10px] w-[10px] rounded-full bg-[#44993b]"></span>
-            <span className=" border-b border-borderColor text-lg text-themeDarkshade transition-all duration-300 ease-in hover:text-themeWhite">
+            <a
+              href="https://www.linkedin.com/services/page/76859132aaa663b51b/"
+              className=" border-b border-borderColor text-lg text-themeDarkshade transition-all duration-300 ease-in hover:text-themeWhite"
+            >
               {`I'm`} available for a freelance job. Hire me
-            </span>
-          </a>
+            </a>
+          </p>
         </div>
         <NavMenu />
       </div>
