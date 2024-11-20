@@ -5,8 +5,6 @@ import App from './App.jsx'
 import MouseBall from './features/MouseBall/MouseBall.jsx';
 
 
-
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />

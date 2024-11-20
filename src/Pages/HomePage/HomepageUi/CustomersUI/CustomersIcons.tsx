@@ -27,9 +27,9 @@ export default function CustomersIcons() {
         <li className="flex h-[200px] items-center justify-center bg-backgroundColorSecondary px-5 py-4">
           <a href="https://qbexel.com/" target="_blank">
             <img
-              className="w-[200px]"
+              className="w-[160px]"
               width={200}
-              src="/companies/LogoDark.png"
+              src="/companies/bikeLpg.png"
               alt=""
             />
           </a>

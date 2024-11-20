@@ -48,12 +48,12 @@ function NavFooter() {
       <div className=" flex flex-wrap items-center gap-3 max-sm:gap-2">
         <span className=" text-lg text-themeDarkshade">Developed by</span>
         <a
-          href="https://www.linkedin.com/in/md-samiul-alam-khan-a2441b239/"
+          href="https://qbexel.com"
           target="_blank"
           rel="noreferrer"
           className=" border-b border-[#ffffff33] text-lg text-themeWhite"
         >
-          MD Samiul Alam Khan
+          Qbexel
         </a>
       </div>
     </div>
