@@ -7,7 +7,7 @@ function ContactMeItems() {
       </h3>
       <p className="mb-[10px] text-[14px] uppercase text-[#888]">Phone</p>
       <h3 className=" font-regular mb-[60px] max-w-[300px] text-[30px] leading-[1.2] text-[#ddd]">
-        (+880) 177 502 4751
+        (+880) 179 502 4751
       </h3>
       <a
         href="mailto:khanriad60@gmail.com"

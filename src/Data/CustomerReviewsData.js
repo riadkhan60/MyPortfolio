@@ -20,6 +20,13 @@ const customerReviewsData = [
     quote:
       "Riad is our leader, he is the main person behind the website of Qbexel, he came out the design and also the functionality. He is also very good at explaining things.",
   },
+  {
+    id: 4,
+    name: "Qbexel Team",
+    company: "Qbexel",
+    quote:
+      "Riad is our leader, he is the main person behind the website of Qbexel, he came out the design and also the functionality. He is also very good at explaining things.",
+  },
 ];
 
 

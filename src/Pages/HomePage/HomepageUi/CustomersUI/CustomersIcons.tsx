@@ -25,7 +25,7 @@ export default function CustomersIcons() {
           </a>
         </li>
         <li className="flex h-[200px] items-center justify-center bg-backgroundColorSecondary px-5 py-4">
-          <a href="https://qbexel.com/" target="_blank">
+          <a href="https://msjannattraders.com/" target="_blank">
             <img
               className="w-[160px]"
               width={200}
