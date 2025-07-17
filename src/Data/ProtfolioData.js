@@ -1,81 +1,92 @@
 const portfoliosData = [
   {
     id: 1,
-    name: "Birds Valley",
-    live: "https://birdsvalley.net/",
-    github: "https://github.com/riadkhan60/birdsValleyReact",
-    techs: "Portfolio Website",
-    image: "./Portfolios/BirdsValley.png",
-    TechUsed: ["React", "React Router", "Tailwind"],
-    description: "A Website for Birds Valley ",
+    name: "Synapse Social",
+    live: "https://synapsesocial.ai", // Update with actual URL when available
+    github: "", // Private repo
+    techs: "AI SaaS Platform",
+    image: "./Portfolios/BirdsValley.png", // Temporary placeholder
+    TechUsed: [
+      "Next.js",
+      "Node.js",
+      "Python",
+      "Langchain",
+      "OpenAI",
+      "DeepSeek",
+      "PostgreSQL",
+    ],
+    description:
+      "Synapse Social is an AI-powered SaaS platform that automates customer engagement through intelligent chat experiences. Designed for modern businesses, it helps streamline sales, support, and product discovery directly through social messaging platforms. Built from the ground up as Lead Developer, leveraging cutting-edge AI technologies to deliver real-time, contextual interactions.",
   },
-
   {
     id: 2,
-    name: "Invoice Builder",
-    live: "https://startup-invoice-builder.netlify.app/admin/token",
-    github: "https://github.com/riadkhan60/invoice-builder",
-    techs: "Web Tool",
-    image: "./Portfolios/InvoiceBuilder.png",
-    TechUsed: ["React", "React Router", "Tailwind", "daisy Ui", "React Pdf"],
+    name: "Qbexel",
+    live: "https://qbexel.com", // Update with actual URL
+    github: "",
+    techs: "Tech Company",
+    image: "./Portfolios/myportfolio.png", // Temporary placeholder
+    TechUsed: [
+      "Full-Stack Development",
+      "AI/ML Integration",
+      "Team Leadership",
+      "System Architecture",
+      "Business Strategy",
+    ],
     description:
-      "Invoice Builder is a web tool where you can create invoices. dynamically ",
+      "Co-founded tech company focused on AI-powered SaaS innovation. Leading tech vision, system architecture, and team growth while driving product development. Specializing in transforming traditional business processes through intelligent automation and modern web technologies.",
   },
   {
     id: 3,
-    name: "Riad60",
-    live: "https://riad60.netlify.app",
+    name: "Tech  Architecture",
+    live: "",
     github: "",
-    techs: "Portfolio Website",
-    image: "./Portfolios/myportfolio.png",
+    techs: "Leadership Role",
+    image: "./Portfolios/Jobportal.png", // Temporary placeholder
     TechUsed: [
-      "React",
-      "React Router",
-      "Tailwind",
-      "GSAP",
-      "Node",
-      "Express",
-      "MongoDB",
+      "System Architecture",
+      "Team Scaling",
+      "Performance Optimization",
+      "Cloud Solutions",
+      "Technical Mentorship",
     ],
     description:
-      "My first portfolio website. I build it using React, React Router, Tailwind, GSAP, Node, Express, MongoDB.",
+      "5+ years of experience delivering scalable web applications across frontend, backend, and cloud infrastructure. Leading technical decisions, mentoring development teams, and architecting systems that handle real-world complexity while maintaining performance and reliability.",
   },
   {
     id: 4,
-    name: "My Todo",
-    live: "https://todolist60.netlify.app/",
-    github: "https://github.com/riadkhan60/TodoApp",
-    techs: "Web Tool",
-    image: "./Portfolios/Todo.png",
-    TechUsed: ["JavaScript", "MVC Architecture"],
-    description: "My Todo App. I build it using JavaScript, MVC Architecture.",
+    name: "GitHub & Open Source",
+    live: "",
+    github: "https://github.com/riadkhan60", // Update with your actual GitHub
+    techs: "Code Repository",
+    image: "./Portfolios/DrawingApp.png", // Temporary placeholder
+    TechUsed: [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "AI/ML",
+      "Full-Stack",
+    ],
+    description:
+      "Explore my code repositories, contributions, and development journey. From experimental AI projects to production-ready solutions that showcase technical expertise. Open source contributions reflecting continuous learning and innovation in modern web development.",
   },
   {
     id: 5,
-    name: "Job Portal",
-    live: "https://job-portal60.netlify.app/",
-    github: "https://github.com/riadkhan60/job-poratal",
-    techs: "Web Service",
-    image: "./Portfolios/Jobportal.png",
+    name: "AI Research & Innovation",
+    live: "",
+    github: "",
+    techs: "AI Research & Learning",
+    image: "./Portfolios/Todo.png", // Temporary placeholder
     TechUsed: [
-      "React",
-      "React Router",
-      "React Query",
-      "Material Ui",
-      "Node",
-      "Express",
+      "AI Tools Research",
+      "LLM Integration",
+      "Prompt Engineering",
+      "AI Workflow Design",
+      "Knowledge Sharing",
+      "Value Creation",
     ],
-    description: "Job Portal. I build it using React, React Router, React Query, Material Ui, Node, Express.",
-  },
-  {
-    id: 6,
-    name: "Drawing App",
-    live: "https://drawingapp60.netlify.app/",
-    github: "https://github.com/riadkhan60/Drawing-App",
-    techs: "Web Tool",
-    image: "./Portfolios/DrawingApp.png",
-    TechUsed: ["JavaScript", "Canvas"],
-    description: "Drawing App. I build it using JavaScript, Canvas.",
+    description:
+      "Deep exploration into the AI era, researching and experimenting with cutting-edge AI tools, terminologies, and methodologies. Teaching others how to leverage AI technologies effectively while generating real business value through intelligent automation and innovative AI applications.",
   },
 ];
 

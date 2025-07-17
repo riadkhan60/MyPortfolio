@@ -6,7 +6,7 @@ import { myAge } from "../../../helper/helperFunctions";
 function AboutTable() {
 
   return (
-    <div className=" mb-[126px] mt-[74px] flex justify-between max-xl:flex-col">
+    <div className=" mb-[126px] flex justify-between max-xl:flex-col">
       <div className=" w-full">
         <table className=" w-full max-w-full table-fixed border-collapse  border-spacing-0 border-none p-0 text-left">
           <tbody>

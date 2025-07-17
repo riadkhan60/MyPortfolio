@@ -5,17 +5,20 @@ import BlogsHeading from "./Sections/BlogsHeading";
 
 function BlogsPage() {
   return (
-    <div>
-      <div className=" h-full w-[100%] transition-all duration-0 ease-in-out max-lg:block">
-        <div className=" bg-white">
+    <div className="bg-backgroundColor min-h-screen">
+      <div className="h-full w-[100%] transition-all duration-0 ease-in-out max-lg:block">
+        <div className="bg-white">
           <NavMenu />
           <MenuLayout />
         </div>
       </div>
-      <div >
+
+      <main className="py-12 lg:py-20">
         <BlogsHeading />
-        <BlogsGrid />
-      </div>
+        <div className="mt-16 lg:mt-24">
+          <BlogsGrid />
+        </div>
+      </main>
     </div>
   );
 }

@@ -7,13 +7,13 @@ function Services() {
     <div id="services" className=" mb-[150px]">
       <SectionContainer>
         <SectionInfo>
-          <SectionInfo.Subtitle>Services</SectionInfo.Subtitle>
-          <SectionInfo.Title>How I can help you</SectionInfo.Title>
+          <SectionInfo.Subtitle>Strategic Offerings</SectionInfo.Subtitle>
+          <SectionInfo.Title>What I can deliver for you</SectionInfo.Title>
           <SectionInfo.Description>
-            I have assisted numerous businesses and individuals in creating
-            their websites and custom applications. With a dedicated team by my
-            side, I am always eager to embrace new challenges and deliver
-            innovative solutions.
+            I offer strategic AI solutions and product development services that
+            drive real business value. From AI integration to scalable product
+            architecture, I help organizations leverage cutting-edge technology
+            for competitive advantage.
           </SectionInfo.Description>
         </SectionInfo>
         <ServicesCards />

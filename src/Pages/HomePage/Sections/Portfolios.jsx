@@ -2,15 +2,14 @@ import SectionContainer from "../HomepageUi/SectionContainer";
 import SectionInfo from "../HomepageUi/SectionInfo";
 import { Swipe } from "../HomepageUi/Swipper";
 
-
 function Portfolios() {
   return (
     <div id="portfolio" className=" w-full text-white">
       <SectionContainer>
         <SectionInfo>
-          <SectionInfo.Subtitle>PORTFOLIO</SectionInfo.Subtitle>
+          <SectionInfo.Subtitle>WHAT I&apos;M BUILDING</SectionInfo.Subtitle>
           <div className=" flex items-start justify-between">
-            <SectionInfo.Title>Featured Projects</SectionInfo.Title>
+            <SectionInfo.Title>Current Projects & Ventures</SectionInfo.Title>
             <div>
               <div className=" button-swiper text-white">
                 <div className="swiper-button-prev-portfolio swiper-button-prev"></div>
@@ -19,8 +18,9 @@ function Portfolios() {
             </div>
           </div>
           <SectionInfo.Description>
-            Here are some projects that I have worked on in the past and am
-            currently working on.
+            From co-founding Qbexel to building AI-powered platforms like
+            Synapse Social, here&apos;s what I&apos;m currently working on and
+            the ventures driving my entrepreneurial journey.
           </SectionInfo.Description>
         </SectionInfo>
         <Swipe />

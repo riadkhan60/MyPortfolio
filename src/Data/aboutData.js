@@ -7,45 +7,46 @@ const TabDatas = {
 
   experinces: [
     {
-      subTitle: "Self Taught Web developer",
+      subTitle: "Co-founder of Qbexel",
       description:
-        "Energetic web developer with a self-driven attitude and proficiency in various web development tools and languages gained through 3 years of practical experience. I have greatly improved my abilities through independent projects aimed at testing out different features and solving problems. My capacity for self-directed learning andproblem-solving enables me to quickly adjust and produce high-quality web development work.",
+        "Overseeing tech vision, system architecture, and team growth at Qbexel. Driving AI-powered SaaS innovation and shaping our product roadmap through both strategy and hands-on development.",
     },
     {
-      subTitle: "JavaScript Expert",
+      subTitle: "Lead Developer – Synapse Social",
       description:
-        "I have invested a significant amount of time into learning JavaScript, delving deep into its intricacies, and experimenting with various concepts. Through this journey, I have acquired a wealth of knowledge and developed a profound understanding of JavaScript, including its interaction with the Document Object Model (DOM) and browser APIs. This comprehensive mastery of JavaScript has equipped me with the skills and confidence to tackle diverse challenges and create robust, efficient web applications. I am continually honing my expertise and exploring new horizons within the realm of JavaScript development.",
+        "Built Synapse Social from the ground up — an AI-driven platform that automates customer engagement using real-time processing, smart insights, and scalable backend systems.",
     },
     {
-      subTitle: "Working as a Freelancer",
+      subTitle: "Full-Stack Development Expertise",
       description:
-        "As a web developer, I have proudly completed numerous website and web service projects for small to medium-sized businesses and individuals. Tackling these projects has allowed me to solve new challenges, improve my skills, and experience a sense of accomplishment. Each successful project has been a valuable learning opportunity, enabling me to enhance my problem-solving abilities, stay updated with the latest technologies, and refine my approach to web development. The process of transforming client requirements into functional and visually appealing digital solutions has been highly rewarding. I take great pride in my work and strive to deliver quality products that meet or exceed the expectations of my clients.",
+        "5+ years of experience delivering scalable web apps across frontend, backend, and cloud. Strong focus on performance, reliability, and user-focused design.",
     },
   ],
 
   education: [
     {
-      subTitle: "Being more of an autodidact",
+      subTitle: "My Learning Philosophy",
       description:
-        "As not everyone has the privilege of receiving a great education from a renowned educational institution, I consider myself one of those self-learners. Being an autodidact, or a completely self-taught individual, has its advantages for personal growth. It grants you the freedom to learn at your own pace, follow your curiosity, and explore topics that genuinely interest you. This approach has made my journey of learning web development enjoyable and effective.The ability to be an independent learner fosters a sense of ownership over the acquired knowledge, leading to a deeper understanding and retention of concepts. It cultivates self-discipline, time management skills, and the ability to navigate through vast amounts of information independently. With the wealth of resources available online and in libraries, self-learners can tailor their learning paths to their specific needs and goals.Moreover, being an autodidact encourages creativity and problem-solving skills, as you often have to find innovative ways to overcome obstacles and fill in gaps in your understanding. This experience has been particularly valuable in my web development journey, where I have had to tackle unique challenges, experiment with different approaches, and continuously adapt to the ever-evolving landscape of technologies.While the path of self-learning can be arduous at times, the sense of accomplishment and the breadth of knowledge gained make it a truly rewarding and empowering experience.",
+        "For me, development is a journey of continuous learning, not a destination. I believe the most valuable skill is learning how to learn. I stay ahead of the curve by dedicating time each week to exploring new frameworks, diving into official documentation, and engaging with the developer community. This commitment to self-improvement allows me to not only solve today's challenges but also to anticipate and prepare for the technologies of tomorrow.",
     },
 
     {
-      subTitle1: "SSC",
-      subTitle2: "HSC",
-      score1: '5.00',
-      dateSpan1: "2016",
-      dateSpan2: "2018",
-      Board: "Dhaka",
-      score2: '3.75',
+      subTitle1: "Continuous Growth",
+      subTitle2: "Tech Innovation",
+      score1: "Daily",
+      dateSpan1: "Learning",
+      dateSpan2: "Exploring",
+      Board: "Community",
+      score2: "Driven",
     },
 
     {
-      subTitle: "BSc in Computer Science and Engineering",
-      status:"Undergraduate",
-      description: "National University of Bangladesh",
-    }
+      subTitle: "Staying Current & Future-Ready",
+      status: "Always Learning",
+      description:
+        "From attending tech conferences to contributing to open source projects, I ensure the solutions I build are modern, scalable, and robust.",
+    },
   ],
 };
 
-export default TabDatas
+export default TabDatas;

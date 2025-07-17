@@ -4,7 +4,8 @@ import AboutDetailsCards, {
   AboutDetailsCard,
 } from "../HomepageUi/AboutDetailsCards";
 import AboutTable from "../HomepageUi/AboutTable";
-import EducationDetailsCards from "../HomepageUi/EducationDetailsCards";
+import AboutDetailsSection from "../HomepageUi/AboutDetailsSection";
+import MyPhilosophyCards from "../HomepageUi/MyPhilosophyCards";
 import SectionContainer from "../HomepageUi/SectionContainer";
 import SectionInfo from "../HomepageUi/SectionInfo";
 import SkillContent from "../HomepageUi/SkillContent";
@@ -14,20 +15,26 @@ function About() {
     <div id="about">
       <SectionContainer>
         <SectionInfo>
-          <SectionInfo.Subtitle>About me</SectionInfo.Subtitle>
+          <SectionInfo.Subtitle>About</SectionInfo.Subtitle>
           <SectionInfo.Title>Biography</SectionInfo.Title>
           <SectionInfo.Description>
-            {`I'm`} a Front-end Developer with over 3 years of experience.
-            {` I'm`} from Tangail, Bangladesh. I code and create web sites for
-            amazing people around the world. I like work with new people. New
-            people are new experiences. Web Developing and Designing is my
-            passion.
+            Started as a frontend developer and evolved into a tech
+            entrepreneur. Over 5+ years, I&apos;ve mastered the full development
+            stack while building multiple SaaS products. My journey from code to
+            co-founding Qbexel has taught me that great technology solves real
+            problems and creates lasting value.
           </SectionInfo.Description>
-          <AboutTable />
+
+          {/* Enhanced Details Section with Icons and Animations */}
+          <AboutDetailsSection />
+          <div className="mt-[60px]">
+            <SectionInfo.Title>My info</SectionInfo.Title>
+            <AboutTable />
+          </div>
         </SectionInfo>
         <AboutDetails>
           <AboutDetails.TabHeader
-            lists={["Experiences", "Skills", "Education"]}
+            lists={["Experiences", "Skills", "Learning Philosophy"]}
           />
           <AboutDetails.TabContent title={"Experiences"}>
             <AboutDetailsCards
@@ -40,8 +47,8 @@ function About() {
           <AboutDetails.TabContent title={"Skills"}>
             <SkillContent />
           </AboutDetails.TabContent>
-          <AboutDetails.TabContent title={"Education"}>
-            <EducationDetailsCards />
+          <AboutDetails.TabContent title={"Learning Philosophy"}>
+            <MyPhilosophyCards />
           </AboutDetails.TabContent>
         </AboutDetails>
       </SectionContainer>

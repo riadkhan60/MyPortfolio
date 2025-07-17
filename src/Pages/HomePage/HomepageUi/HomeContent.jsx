@@ -5,10 +5,13 @@ function HomeContent() {
   return (
     <SectionInfo>
       <SectionInfo.Subtitle>Introduction</SectionInfo.Subtitle>
-      <SectionInfo.Title>Web Developer</SectionInfo.Title>
+      <SectionInfo.Title>Co-founder & Builder</SectionInfo.Title>
       <SectionInfo.Description>
-        I design and develop services for customers of all sizes, specializing
-        in creating stylish, modern websites, web services and online stores.
+        I’m the co-founder of Qbexel and the lead developer behind Synapse
+        Social — an AI-powered SaaS platform for smart customer engagement. I
+        specialize in developing scalable full stack systems, real-time
+        automation, and solving complex tech problems with clean and efficient
+        solutions.
       </SectionInfo.Description>
       <Signature />
     </SectionInfo>

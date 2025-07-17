@@ -8,10 +8,12 @@ function Customers() {
     <div id="customers" className=" mb-[150px]">
       <SectionContainer>
         <SectionInfo>
-          <SectionInfo.Subtitle>Customers</SectionInfo.Subtitle>
-          <SectionInfo.Title>Happy Clients</SectionInfo.Title>
+          <SectionInfo.Subtitle>Impact & Growth</SectionInfo.Subtitle>
+          <SectionInfo.Title>By the numbers</SectionInfo.Title>
           <SectionInfo.Description>
-            Proud to bring satisfaction and happiness to my clients.
+            Measurable impact through AI research, product development, and
+            community contributions that demonstrate consistent growth and value
+            creation.
           </SectionInfo.Description>
         </SectionInfo>
         <div>

@@ -29,7 +29,7 @@ function Profile() {
               href="https://www.linkedin.com/services/page/76859132aaa663b51b/"
               className=" border-b border-borderColor text-lg text-themeDarkshade transition-all duration-300 ease-in hover:text-themeWhite"
             >
-              {`I'm`} available for a freelance job. Hire me
+              Exploring high-impact ideas — let’s talk.
             </a>
           </p>
         </div>

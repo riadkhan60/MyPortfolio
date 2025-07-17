@@ -6,35 +6,19 @@ function ServicesCards() {
           <div className=" flex justify-between gap-5 bg-backgroundColorSecondary px-[40px] py-[43px] max-md:flex-col">
             <div className=" flex-[3]">
               <h2 className=" mb-[17px] text-3xl  text-white">
-                Web Development
+                AI Strategy & Implementation
               </h2>
               <p className=" text-lg text-themeDarkshade">
-                I build all types of websites, including portfolios, e-commerce
-                platforms, and more.
+                I help organizations integrate AI into their business processes
+                through strategic planning, LLM implementation, and custom AI
+                solutions. From proof of concept to enterprise deployment,
+                driving measurable ROI.
               </p>
             </div>
             <div className="flex flex-[1] flex-col  items-center   gap-3 border-l border-white/10 max-md:flex-row max-md:border-none md:justify-center">
-              <p className="text-lg text-themeDarkshade">Strats from</p>
+              <p className="text-lg text-themeDarkshade">Engagement</p>
               <h4 className=" text-3xl font-medium  text-subtitleColor max-md:text-2xl">
-                $150
-              </h4>
-            </div>
-          </div>
-        </li>
-        <li className="about-line relative">
-          <div className=" flex justify-between gap-5 bg-backgroundColorSecondary px-[40px] py-[43px] max-md:flex-col">
-            <div className=" flex-[3]">
-              <h2 className=" mb-[17px] text-3xl  text-white">UI/UX Design</h2>
-              <p className=" text-lg text-themeDarkshade">
-                With a keen eye for detail, I craft intuitive and visually
-                appealing UI/UX designs that enhance user experience and drive
-                engagement.
-              </p>
-            </div>
-            <div className=" flex flex-[1]  flex-col items-center gap-3 border-l border-white/10 max-md:flex-row  max-md:border-none md:justify-center">
-              <p className="text-lg text-themeDarkshade">Strats from</p>
-              <h4 className=" text-3xl font-medium  text-subtitleColor max-md:text-2xl">
-                $180
+                Enterprise
               </h4>
             </div>
           </div>
@@ -43,27 +27,41 @@ function ServicesCards() {
           <div className=" flex justify-between gap-5 bg-backgroundColorSecondary px-[40px] py-[43px] max-md:flex-col">
             <div className=" flex-[3]">
               <h2 className=" mb-[17px] text-3xl  text-white">
-                Qbexel Service
+                Product Architecture & Development
               </h2>
               <p className=" text-lg text-themeDarkshade">
-                Qbexel is a full-service digital agency that provides digital
-                services, like website development, UI/UX design, and digital
-                marketing, cyber security, and more.
+                Full-stack product development with scalable architecture
+                design. I build enterprise-grade applications using modern tech
+                stacks, focusing on performance, security, and user experience
+                at scale.
               </p>
             </div>
             <div className=" flex flex-[1]  flex-col items-center gap-3 border-l border-white/10 max-md:flex-row  max-md:border-none md:justify-center">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://qbexel.com/"
-                className="  border-b border-borderColor px-5 py-2 text-sm font-medium text-subtitleColor"
-              >
-                <img
-                  className="w-[100px] max-md:w-[70px]"
-                  src="/LogoDark.png"
-                  alt="qbexel"
-                />
-              </a>
+              <p className="text-lg text-themeDarkshade">Level</p>
+              <h4 className=" text-3xl font-medium  text-subtitleColor max-md:text-2xl">
+                Premium
+              </h4>
+            </div>
+          </div>
+        </li>
+        <li className="about-line relative">
+          <div className=" flex justify-between gap-5 bg-backgroundColorSecondary px-[40px] py-[43px] max-md:flex-col">
+            <div className=" flex-[3]">
+              <h2 className=" mb-[17px] text-3xl  text-white">
+                Technical Leadership & Consulting
+              </h2>
+              <p className=" text-lg text-themeDarkshade">
+                Strategic technical guidance for startups and enterprises. From
+                technology roadmaps to team scaling strategies, I provide the
+                expertise to navigate complex technical decisions and drive
+                innovation.
+              </p>
+            </div>
+            <div className=" flex flex-[1]  flex-col items-center gap-3 border-l border-white/10 max-md:flex-row  max-md:border-none md:justify-center">
+              <p className="text-lg text-themeDarkshade">Approach</p>
+              <h4 className=" text-3xl font-medium  text-subtitleColor max-md:text-2xl">
+                Strategic
+              </h4>
             </div>
           </div>
         </li>

@@ -1,21 +1,47 @@
 import { useForm } from "react-hook-form";
 import BlogCreateHeaderItem from "./BlogCreateHeaderItem";
-import { IoCloudUploadOutline } from "react-icons/io5";
+import {
+  IoCloudUploadOutline,
+  IoCheckmarkCircle,
+  IoReload,
+} from "react-icons/io5";
 
-function BlogsHeading({ value, setError }) {
-  const { register, handleSubmit } = useForm();
+function BlogsHeading({
+  value,
+  setValue,
+  isSubmitting,
+  onSubmissionStart,
+  onSubmissionComplete,
+}) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
   async function onSubmit(data) {
-    if (!data.BlogTitle || !value || !data.file?.[0]) {
-      setError("All fields are required");
+    // Validation
+    if (!data.BlogTitle?.trim()) {
+      onSubmissionComplete(false, "Blog title is required");
       return;
     }
 
-    setError(null);
+    if (!value?.trim()) {
+      onSubmissionComplete(false, "Blog content is required");
+      return;
+    }
+
+    if (!data.file?.[0]) {
+      onSubmissionComplete(false, "Cover photo is required");
+      return;
+    }
+
+    onSubmissionStart();
 
     try {
       const formData = new FormData();
-      formData.append("BlogTitle", data.BlogTitle);
+      formData.append("BlogTitle", data.BlogTitle.trim());
       formData.append("BlogImage", data.file[0]);
 
       // Extract base64 images from the BlogContent
@@ -24,35 +50,55 @@ function BlogsHeading({ value, setError }) {
       const base64Images = [];
       let match;
       while ((match = imageRegex.exec(content)) !== null) {
-        base64Images.push(match[1]);
+        if (match[1].startsWith("data:")) {
+          base64Images.push(match[1]);
+        }
       }
 
-      // Upload base64 images and get back URLs
-      const imageUrls = await Promise.all(
-        base64Images.map(async (base64Image) => {
-          const imageFormData = new FormData();
-          imageFormData.append("image", base64ToFile(base64Image));
-
-          const response = await fetch("http://localhost:3000/upload-image", {
-            method: "POST",
-            body: imageFormData,
-          });
-
-          const result = await response.json();
-          return result.url; // Assume server returns the URL of the uploaded image
-        }),
-      );
-
-      // Replace base64 images with uploaded image URLs
       let modifiedContent = content;
-      base64Images.forEach((base64Image, index) => {
-        modifiedContent = modifiedContent.replace(
-          base64Image,
-          imageUrls[index],
-        );
-      });
 
-      // Now that images are replaced, add modified content to formData
+      // Only process base64 images if they exist
+      if (base64Images.length > 0) {
+        try {
+          // Upload base64 images and get back URLs
+          const imageUrls = await Promise.all(
+            base64Images.map(async (base64Image) => {
+              const imageFormData = new FormData();
+              imageFormData.append("image", base64ToFile(base64Image));
+
+              const response = await fetch(
+                "http://localhost:3000/upload-image",
+                {
+                  method: "POST",
+                  body: imageFormData,
+                },
+              );
+
+              if (!response.ok) {
+                throw new Error(`Image upload failed: ${response.statusText}`);
+              }
+
+              const result = await response.json();
+              return result.url;
+            }),
+          );
+
+          // Replace base64 images with uploaded image URLs
+          base64Images.forEach((base64Image, index) => {
+            modifiedContent = modifiedContent.replace(
+              base64Image,
+              imageUrls[index],
+            );
+          });
+        } catch (imageError) {
+          console.log(
+            "Image upload failed, proceeding without image replacement:",
+            imageError,
+          );
+          // Continue with original content if image upload fails
+        }
+      }
+
       formData.append("BlogContent", modifiedContent);
 
       const response = await fetch("http://localhost:3000/blog", {
@@ -60,59 +106,108 @@ function BlogsHeading({ value, setError }) {
         body: formData,
       });
 
-      const result = await response.json();
-      console.log(result);
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Blog published successfully:", result);
+        reset();
+        setValue("");
+        onSubmissionComplete(true, "Blog published successfully!");
+      } else {
+        throw new Error(`Server error: ${response.statusText}`);
+      }
     } catch (error) {
-      console.log(error);
+      console.error("Blog submission error:", error);
+      onSubmissionComplete(
+        false,
+        "Failed to publish blog. Please check your connection and try again.",
+      );
     }
   }
 
   // Function to convert base64 image to a File object
   function base64ToFile(base64String) {
-    const byteString = atob(base64String.split(",")[1]);
-    const mimeString = base64String.split(",")[0].split(":")[1].split(";")[0];
-    const ab = new ArrayBuffer(byteString.length);
-    const ia = new Uint8Array(ab);
-    for (let i = 0; i < byteString.length; i++) {
-      ia[i] = byteString.charCodeAt(i);
+    try {
+      const byteString = atob(base64String.split(",")[1]);
+      const mimeString = base64String.split(",")[0].split(":")[1].split(";")[0];
+      const ab = new ArrayBuffer(byteString.length);
+      const ia = new Uint8Array(ab);
+      for (let i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+      }
+      const blob = new Blob([ab], { type: mimeString });
+      return new File([blob], "image.png", { type: mimeString });
+    } catch (error) {
+      console.error("Error converting base64 to file:", error);
+      throw new Error("Invalid image format");
     }
-    const blob = new Blob([ab], { type: mimeString });
-    return new File([blob], "image.png", { type: mimeString });
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <BlogCreateHeaderItem register={register} title={"BlogTitle"} />
-        <div className="mb-10">
-          <h4
-            className="mb-3 block flex-grow text-2xl text-themeWhite"
-            htmlFor="file"
-          >
-            <span>Cover photo</span>
-          </h4>
-          <label
-            htmlFor="file"
-            className="inline-flex cursor-pointer items-center justify-center gap-2"
-          >
-            <div className="text-2xl text-subtitleColor">
-              <IoCloudUploadOutline />
-            </div>
-            <input
-              id="file"
-              className="cursor-pointer text-subtitleColor"
-              type="file"
-              {...register("file")}
-            />
+    <div className="mb-8">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+        {/* Blog Title */}
+        <BlogCreateHeaderItem
+          register={register}
+          title="BlogTitle"
+          error={errors.BlogTitle}
+        />
+
+        {/* Cover Photo */}
+        <div>
+          <label className="mb-4 block text-xl font-semibold text-themeWhite">
+            Cover Photo
           </label>
+          <div className="relative">
+            <label
+              htmlFor="file"
+              className="flex h-32 w-full cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-borderColor bg-backgroundColorSecondary/50 transition-colors duration-300 hover:bg-backgroundColorSecondary"
+            >
+              <div className="flex flex-col items-center justify-center pb-6 pt-5">
+                <IoCloudUploadOutline className="mb-3 h-8 w-8 text-subtitleColor" />
+                <p className="mb-2 text-sm text-themeDarkshade">
+                  <span className="font-semibold text-subtitleColor">
+                    Click to upload
+                  </span>{" "}
+                  or drag and drop
+                </p>
+                <p className="text-xs text-themeDarkshade">
+                  PNG, JPG or JPEG (MAX. 5MB)
+                </p>
+              </div>
+              <input
+                id="file"
+                type="file"
+                className="hidden"
+                accept="image/*"
+                {...register("file")}
+              />
+            </label>
+          </div>
+          {errors.file && (
+            <p className="mt-2 text-sm text-red-400">{errors.file.message}</p>
+          )}
         </div>
 
-        <button
-          type="submit"
-          className="absolute bottom-0 left-[50%] inline w-[50%] translate-x-[-50%] translate-y-[100px] border border-borderColor px-5 py-2 text-lg font-medium text-subtitleColor"
-        >
-          Publish
-        </button>
+        {/* Submit Button */}
+        <div className="flex justify-center pt-6">
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="text-backgroundColor inline-flex min-w-[200px] items-center justify-center gap-3 rounded-lg border border-subtitleColor bg-subtitleColor px-8 py-4 font-semibold transition-all duration-300 hover:bg-subtitleColor/90 disabled:bg-subtitleColor/50"
+          >
+            {isSubmitting ? (
+              <>
+                <IoReload className="h-5 w-5 animate-spin" />
+                Publishing...
+              </>
+            ) : (
+              <>
+                <IoCheckmarkCircle className="h-5 w-5" />
+                Publish Article
+              </>
+            )}
+          </button>
+        </div>
       </form>
     </div>
   );

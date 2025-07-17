@@ -1,17 +1,41 @@
-
-import SkillDetails from "./SkillDetails";
-import Skills from "./Skills";
+import SkillTabs from "./SkillTabs";
+import FrontendSkills from "./FrontendSkills";
+import BackendSkills from "./BackendSkills";
+import ProgrammingSkills from "./ProgrammingSkills";
+import SkillBar from "./SkillBar";
 
 function SkillContent() {
   return (
-    <div className=" skill-content flex flex-col gap-10 xl:flex-row ">
-      <div className=" relative lg:min-w-[500px]">
-        <Skills />
-      </div>
-      <div className=" h-[500px] bg-backgroundColorSecondary">
-        <SkillDetails />
-      </div>
-    </div>
+    <SkillTabs>
+      <SkillTabs.SkillTabHeader
+        lists={[
+          "Frontend",
+          "Backend",
+          "Programming",
+          "AI & ML",
+          "DevOps",
+          "Leadership",
+        ]}
+      />
+      <SkillTabs.SkillTabContent title={"Frontend"}>
+        <FrontendSkills />
+      </SkillTabs.SkillTabContent>
+      <SkillTabs.SkillTabContent title={"Backend"}>
+        <BackendSkills />
+      </SkillTabs.SkillTabContent>
+      <SkillTabs.SkillTabContent title={"Programming"}>
+        <ProgrammingSkills />
+      </SkillTabs.SkillTabContent>
+      <SkillTabs.SkillTabContent title={"AI & ML"}>
+        <SkillBar category="aiml" />
+      </SkillTabs.SkillTabContent>
+      <SkillTabs.SkillTabContent title={"DevOps"}>
+        <SkillBar category="devops" />
+      </SkillTabs.SkillTabContent>
+      <SkillTabs.SkillTabContent title={"Leadership"}>
+        <SkillBar category="leadership" />
+      </SkillTabs.SkillTabContent>
+    </SkillTabs>
   );
 }
 

@@ -1,45 +1,175 @@
-.quill > * {
-  border-color: inherit !important;
-  color: inherit !important;
-  border-color: #987750 !important;
+/* Dark theme for Quill editor */
+.quill-dark .ql-toolbar {
+  border: 1px solid #987750 !important;
+  border-radius: 12px 12px 0 0;
+  background-color: #1a1a1a;
+  padding: 12px;
 }
-.quill > .ql-toolbar {
-  /* border radius of the toolbar */
-  border-radius: 10px 10px 0 0;
+
+.quill-dark .ql-container {
+  border: 1px solid #987750 !important;
+  border-top: none !important;
+  border-radius: 0 0 12px 12px;
+  background-color: #1a1a1a;
+  font-size: 16px;
+  min-height: 400px;
 }
-.quill > .ql-container {
-  /* border radius of the container and for font size*/
-  font-size: inherit;
-  border-radius: 0 0 10px 10px;
-  height: 300px;
-}
-.ql-toolbar.ql-snow .ql-picker-label {
+
+.quill-dark .ql-editor {
   color: #f0f0f0 !important;
-  opacity: 0.76;
+  font-family: inherit;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 360px;
 }
-.ql-snow .ql-picker {
-  color: inherit !important;
+
+.quill-dark .ql-editor.ql-blank::before {
+  color: #888888 !important;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* Toolbar button styling */
+.quill-dark .ql-toolbar button {
+  margin: 2px;
+  border-radius: 6px;
+  padding: 6px;
+  transition: all 0.2s ease;
+}
+
+.quill-dark .ql-toolbar button:hover {
+  background-color: #987750 !important;
+}
+
+.quill-dark .ql-toolbar button.ql-active {
+  background-color: #987750 !important;
+  color: #ffffff !important;
+}
+
+.quill-dark .ql-toolbar button svg {
+  fill: #f0f0f0 !important;
+  opacity: 0.8;
+}
+
+.quill-dark .ql-toolbar button:hover svg {
+  opacity: 1;
+}
+
+/* Dropdown styling */
+.quill-dark .ql-picker {
   color: #f0f0f0 !important;
 }
-.quill > .ql-container > .ql-editor.ql-blank::before {
-  /* for placeholder */
-  color: #f5f5f5;
+
+.quill-dark .ql-picker-label {
+  color: #f0f0f0 !important;
+  opacity: 0.8;
+  border-radius: 6px;
+  padding: 4px 8px;
 }
-.ql-snow.ql-toolbar button svg {
-  opacity: 0.76;
-  color: #f0f0f0;
+
+.quill-dark .ql-picker-label:hover {
+  background-color: #987750 !important;
+  opacity: 1;
 }
-.ql-snow .ql-stroke {
-  /* for the border of the editor */
+
+.quill-dark .ql-picker-options {
+  background-color: #2a2a2a !important;
+  border: 1px solid #987750 !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.quill-dark .ql-picker-item {
+  color: #f0f0f0 !important;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.quill-dark .ql-picker-item:hover {
+  background-color: #987750 !important;
+  color: #ffffff !important;
+}
+
+/* Stroke and fill colors for icons */
+.quill-dark .ql-stroke {
   stroke: #f0f0f0 !important;
 }
-.ql-snow .ql-fill {
-  /* for the bg color */
+
+.quill-dark .ql-fill {
   fill: #f0f0f0 !important;
 }
-.ql-picker-item {
-  /* for dropdown */
-  color: #4b1010 !important;
+
+/* Format styling within editor */
+.quill-dark .ql-editor h1 {
+  color: #ffffff !important;
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
 
+.quill-dark .ql-editor h2 {
+  color: #ffffff !important;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
 
+.quill-dark .ql-editor h3 {
+  color: #ffffff !important;
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+.quill-dark .ql-editor blockquote {
+  border-left: 4px solid #987750;
+  background-color: #2a2a2a;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+  color: #e0e0e0 !important;
+  font-style: italic;
+}
+
+.quill-dark .ql-editor code {
+  background-color: #2a2a2a !important;
+  color: #987750 !important;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Monaco", "Consolas", monospace;
+}
+
+.quill-dark .ql-editor pre {
+  background-color: #2a2a2a !important;
+  color: #f0f0f0 !important;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #987750;
+  overflow-x: auto;
+}
+
+/* Link styling */
+.quill-dark .ql-editor a {
+  color: #987750 !important;
+  text-decoration: underline;
+}
+
+.quill-dark .ql-editor a:hover {
+  color: #b8925f !important;
+}
+
+/* List styling */
+.quill-dark .ql-editor ul,
+.quill-dark .ql-editor ol {
+  color: #f0f0f0 !important;
+  padding-left: 1.5em;
+}
+
+.quill-dark .ql-editor li {
+  margin-bottom: 0.25em;
+}
+
+/* Image styling */
+.quill-dark .ql-editor img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}

@@ -11,23 +11,15 @@ const customerReviewsData = [
     name: "Mahmudul Khan Sohan",
     company: "Bird's Valley",
     quote:
-      "Bird’s Valley now has a great website & We tools thanks to this team. They have done a great job to our style and boosted our online presence. Super easy to work with, highly recommend!",
+      "Bird’s Valley now has a great website & tools thanks to this team. They have done a great job to our style and boosted our online presence. Super easy to work with, highly recommend!",
   },
   {
     id: 3,
-    name: "Qbexel Team",
-    company: "Qbexel",
+    name: "Matin Khan",
+    company: "Chicken Hut",
     quote:
-      "Riad is our leader, he is the main person behind the website of Qbexel, he came out the design and also the functionality. He is also very good at explaining things.",
-  },
-  {
-    id: 4,
-    name: "Qbexel Team",
-    company: "Qbexel",
-    quote:
-      "Riad is our leader, he is the main person behind the website of Qbexel, he came out the design and also the functionality. He is also very good at explaining things.",
+      "Riad built us a powerful custom CRM and billing system tailored for our restaurant. It’s fast, easy to use, and the AI features help us track sales, manage customers, and even automate follow-ups. He understood our needs perfectly and delivered beyond expectations. Highly recommended!",
   },
 ];
 
-
-export default customerReviewsData
+export default customerReviewsData;

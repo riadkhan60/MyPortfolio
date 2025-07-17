@@ -5,14 +5,17 @@ import {
 } from "react-router-dom";
 import AppLayout from "./AppLayout";
 import HomePage from "./Pages/HomePage/HomePage";
-import BlogsPage from "./Pages/BlogsPage/BlogsPage";
-import BlogOverView from "./Pages/BlogsPage/BlogOverView/BlogOverView";
-import BlogsCreate from "./Pages/BlogsPage/BlogsCreate/BlogsCreate";
+// import BlogsPage from "./Pages/BlogsPage/BlogsPage";
+import CurrentlyBusy from "./Pages/Currently-busy/CurrentlyBusy";
+import NotFound from "./Pages/NotFoundPage/NotFoundPage";
+// import BlogOverView from "./Pages/BlogsPage/BlogOverView/BlogOverView";
+// import BlogsCreate from "./Pages/BlogsPage/BlogsCreate/BlogsCreate";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
@@ -24,16 +27,16 @@ const router = createBrowserRouter([
       },
       {
         path: "blogs",
-        element: <BlogsPage />,
+        element: <CurrentlyBusy />,
       },
-      {
-        path: "blogs/:id",
-        element: <BlogOverView />,
-      },
-      {
-        path: "blogs/create",
-        element: <BlogsCreate />,
-      },
+      // {
+      //   path: "blogs/:id",
+      //   element: <BlogOverView />,
+      // },
+      // {
+      //   path: "blogs/create",
+      //   element: <BlogsCreate />,
+      // },
     ],
   },
 ]);

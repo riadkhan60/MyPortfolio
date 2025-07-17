@@ -5,6 +5,8 @@ import ContactMeForm from '../HomepageUi/ContactMEUi/ContactMeForm';
 
 export default function ContactMeSection() {
   return (
+    <div id="contacts">
+
     <SectionContainer>
       <SectionInfo>
         <SectionInfo.Subtitle>Contact</SectionInfo.Subtitle>
@@ -17,5 +19,6 @@ export default function ContactMeSection() {
 
       <ContactMeForm />
     </SectionContainer>
+    </div>
   );
 }

@@ -1,30 +1,37 @@
-import axios from "axios";
-import {  useState } from "react";
+import { useState } from "react";
 
-function useFormSubmit(reset) {
-  const [state, setState] = useState("idle");
+const useFormSubmit = (reset) => {
+  const [state, setState] = useState("idle"); // idle | submitting | success | error
 
-  async function postForm(data) {
+  const postForm = async (data) => {
+    setState("submitting");
+
     try {
-      setState("submitting");
-      await axios.post("http://localhost:3000/contact", data, {
+      const res = await fetch("https://formsubmit.co/annakhn50@gmail.com", {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
+        body: JSON.stringify({
+          ...data,
+          _captcha: false,
+        }),
       });
-      setState("success");
 
-      setTimeout(() => {
-        setState("idle");
+      if (res.ok) {
+        setState("success");
         reset();
-      }, 1000);
-    } catch (error) {
+      } else {
+        setState("error");
+      }
+    } catch (err) {
+      console.error(err);
       setState("error");
     }
-  }
+  };
 
-  return { state, setState, postForm };
-}
+  return { state, postForm };
+};
 
 export default useFormSubmit;
