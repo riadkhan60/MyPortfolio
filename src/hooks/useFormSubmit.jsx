@@ -7,7 +7,7 @@ const useFormSubmit = (reset) => {
     setState("submitting");
 
     try {
-      const res = await fetch("https://formsubmit.co/riadkhan60@gmail.com", {
+      const res = await fetch("https://formsubmit.co/khanriad60@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
