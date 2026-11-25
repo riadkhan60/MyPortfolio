@@ -5,13 +5,12 @@ function HomeContent() {
   return (
     <SectionInfo>
       <SectionInfo.Subtitle>Introduction</SectionInfo.Subtitle>
-      <SectionInfo.Title>Co-founder & Builder</SectionInfo.Title>
+      <SectionInfo.Title>Founder & Builder</SectionInfo.Title>
       <SectionInfo.Description>
-        I’m the co-founder of Qbexel and the lead developer behind Synapse
-        Social — an AI-powered SaaS platform for smart customer engagement. I
-        specialize in developing scalable full stack systems, real-time
-        automation, and solving complex tech problems with clean and efficient
-        solutions.
+        I’m the founder and chief system architect of Qbexel. I design and
+        ship AI products end to end, from the data model to the production
+        servers: AutoMate to run an online shop, KomoBox for one social inbox,
+        KomoVoice for AI phone calls and KomoChat for AI sales chat.
       </SectionInfo.Description>
       <Signature />
     </SectionInfo>

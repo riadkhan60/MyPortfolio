@@ -2,24 +2,27 @@ const TabDatas = {
   skills: {
     subTitle: "Skills I have Achieved",
     description:
-      "As a web developer, my journey has been an ever-evolving path of acquiring and mastering a diverse array of skills. From the foundational building blocks of the web to the cutting-edge technologies that shape modern web applications, I have immersed myself in a multitude of skils and tools. The animation showcases the timeline of my learning progress, depicting the various skills I have acquired and put into practice through my projects",
+      "I started with the building blocks of the web and grew into AI products, backends and the servers they run on. The animation shows the skills I have picked up along the way and use in real projects.",
   },
 
   experinces: [
     {
-      subTitle: "Co-founder of Qbexel",
+      subTitle: "Founder & Chief System Architect · Qbexel",
+      date: "Sep 2024 – Present",
       description:
-        "Overseeing tech vision, system architecture, and team growth at Qbexel. Driving AI-powered SaaS innovation and shaping our product roadmap through both strategy and hands-on development.",
+        "I own product design, system architecture and engineering for the Qbexel ecosystem: AutoMate, KomoBox, KomoChat, KomoVoice, FraudChecker and Eastrak. I also set up and run the production servers, and build with AI coding agents across many repositories in parallel.",
     },
     {
-      subTitle: "Lead Developer – Synapse Social",
+      subTitle: "Startup programs",
+      date: "2025 – 2026",
       description:
-        "Built Synapse Social from the ground up — an AI-driven platform that automates customer engagement using real-time processing, smart insights, and scalable backend systems.",
+        "Qbexel is a Flagship startup at NSU Startups Next (Cohort 4, after the Cohort 3 Founders' Lab), a member of NVIDIA Inception, and has startup grants from ElevenLabs and Anthropic.",
     },
     {
-      subTitle: "Full-Stack Development Expertise",
+      subTitle: "Freelance Full-Stack Developer",
+      date: "2023 – 2024",
       description:
-        "5+ years of experience delivering scalable web apps across frontend, backend, and cloud. Strong focus on performance, reliability, and user-focused design.",
+        "Built websites, online stores and custom systems for local businesses, including Deshi Home Decor, Perfect Computer, Chicken Hut and Birds Valley, from design to deployment. Client work continues under Qbexel.",
     },
   ],
 

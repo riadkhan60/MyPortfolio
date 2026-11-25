@@ -1,11 +1,4 @@
-import {
-  FiTarget,
-  FiZap,
-  FiHeart,
-  FiTrendingUp,
-  FiUsers,
- 
-} from "react-icons/fi";
+import { FiTarget, FiZap, FiHeart, FiAward, FiUsers } from "react-icons/fi";
 
 function AboutDetailsSection() {
   const detailSections = [
@@ -25,20 +18,20 @@ function AboutDetailsSection() {
       icon: <FiHeart className="h-5 w-5" />,
       title: "Beyond the Code",
       description:
-        "When I'm not building the next feature for Synapse Social, you'll find me exploring emerging technologies, experimenting with new tools, and constantly trying to build something innovative with my co-founders.",
+        "When I'm not building the next feature for AutoMate or KomoChat, you'll find me exploring emerging technologies, trying new AI tools early, and building something new with the Qbexel team.",
     },
   ];
 
   const achievements = [
     {
       icon: <FiUsers className="h-6 w-6" />,
-      title: "NSU Startup Next Cohort 3",
-      subtitle: "Selected for Synapse Social innovation",
+      title: "NSU Startups Next Flagship",
+      subtitle: "Cohort 4 (2026), after the Cohort 3 Founders' Lab (2025)",
     },
     {
-      icon: <FiTrendingUp className="h-6 w-6" />,
-      title: "20+ Businesses Helped",
-      subtitle: "Software Development & digital Solutions",
+      icon: <FiAward className="h-6 w-6" />,
+      title: "NVIDIA Inception",
+      subtitle: "Qbexel accepted in November 2026",
     },
   ];
 

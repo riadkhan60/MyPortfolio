@@ -13,7 +13,7 @@ function AboutTable() {
             <AboutTableItem title={"Name"} value={"MD Samiul Alam Khan"} />
             <AboutTableItem title={"BirthDay"} value={"1st december 2000"} />
             <AboutTableItem title={"Age"} value={myAge} />
-            <AboutTableItem title={"Address"} value={"Tangail, Bangladesh"} />
+            <AboutTableItem title={"Address"} value={"Dhaka, Bangladesh"} />
             <AboutTableItem
               title={"Phone"}
               value={"(+880) 1795024751"}

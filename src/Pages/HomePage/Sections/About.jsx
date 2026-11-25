@@ -18,11 +18,11 @@ function About() {
           <SectionInfo.Subtitle>About</SectionInfo.Subtitle>
           <SectionInfo.Title>Biography</SectionInfo.Title>
           <SectionInfo.Description>
-            Started as a frontend developer and evolved into a tech
-            entrepreneur. Over 5+ years, I&apos;ve mastered the full development
-            stack while building multiple SaaS products. My journey from code to
-            co-founding Qbexel has taught me that great technology solves real
-            problems and creates lasting value.
+            I started as a frontend developer, built websites and custom systems
+            for local businesses, and founded Qbexel in September 2024. Our first
+            product, an AI order parser, signed up 800+ businesses, and 150+ kept
+            paying for over a year with no marketing. Now I build AI that runs
+            real businesses.
           </SectionInfo.Description>
 
           {/* Enhanced Details Section with Icons and Animations */}

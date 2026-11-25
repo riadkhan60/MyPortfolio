@@ -11,9 +11,8 @@ function Customers() {
           <SectionInfo.Subtitle>Impact & Growth</SectionInfo.Subtitle>
           <SectionInfo.Title>By the numbers</SectionInfo.Title>
           <SectionInfo.Description>
-            Measurable impact through AI research, product development, and
-            community contributions that demonstrate consistent growth and value
-            creation.
+            Real results from real shops, and the programs that support
+            Qbexel.
           </SectionInfo.Description>
         </SectionInfo>
         <div>

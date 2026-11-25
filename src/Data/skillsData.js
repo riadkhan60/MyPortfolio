@@ -23,44 +23,39 @@ const SkillsData = {
   aiml: {
     title: "AI & Machine Learning",
     description:
-      "Artificial intelligence, machine learning frameworks, and data science tools for intelligent solutions.",
+      "LLMs, agents, voice and visual search, used in real products like KomoChat and KomoVoice.",
     skills: [
       {
-        name: "TensorFlow",
-        description:
-          "Building and training deep learning models for AI applications",
+        name: "LLM apps",
+        description: "Claude, GPT, Gemini and DeepSeek in real products",
       },
       {
-        name: "PyTorch",
-        description:
-          "Developing neural networks and machine learning research projects",
+        name: "AI agents & tool use",
+        description: "Agents that act only through narrow, backend-checked tools",
       },
       {
-        name: "Scikit-learn",
-        description:
-          "Implementing traditional ML algorithms and data preprocessing",
+        name: "RAG",
+        description: "Answers grounded in a shop's own products and data",
       },
       {
-        name: "Pandas",
-        description:
-          "Data manipulation, analysis, and preparation for ML workflows",
+        name: "LangChain / LangGraph",
+        description: "Multi-step AI workflows and orchestration",
       },
       {
-        name: "NumPy",
-        description:
-          "Numerical computing and array operations for data science",
+        name: "Voice agents",
+        description: "Speech-to-speech phone agents on real SIP lines",
       },
       {
-        name: "OpenAI API",
-        description: "Integrating GPT models and AI services into applications",
+        name: "Visual search",
+        description: "Finding products from photos with SigLIP 2, DINOv3 and SAM 3",
       },
       {
-        name: "Hugging Face",
-        description: "Using pre-trained transformers and NLP models",
+        name: "Qdrant",
+        description: "Vector search for products and knowledge",
       },
       {
-        name: "Computer Vision",
-        description: "Image processing and visual recognition systems",
+        name: "ONNX Runtime",
+        description: "Running vision models fast on our own servers",
       },
     ],
   },
@@ -68,82 +63,79 @@ const SkillsData = {
   devops: {
     title: "DevOps & Cloud",
     description:
-      "Cloud platforms, deployment strategies, and infrastructure management for scalable applications.",
+      "Servers, databases and deployments that keep live products running.",
     skills: [
       {
-        name: "AWS",
-        description:
-          "Cloud infrastructure management and serverless deployments",
-      },
-      {
-        name: "Google Cloud",
-        description: "GCP services for hosting and machine learning workloads",
+        name: "Linux servers",
+        description: "Production app, database and messaging servers I set up and run",
       },
       {
         name: "Docker",
-        description: "Containerization for consistent development environments",
+        description: "Containers for every service, the same locally and in production",
       },
       {
-        name: "Kubernetes",
-        description: "Container orchestration and scaling applications",
+        name: "nginx",
+        description: "Reverse proxy, TLS and routing for live products",
+      },
+      {
+        name: "PostgreSQL & PgBouncer",
+        description: "Production databases with connection pooling and daily backups",
       },
       {
         name: "Vercel",
-        description: "Frontend deployment and edge network optimization",
+        description: "Web apps and landing pages with automatic deploys",
       },
       {
-        name: "Netlify",
-        description: "Static site hosting and continuous deployment pipelines",
+        name: "AWS",
+        description: "EC2, S3 and RDS for hosting and storage",
       },
       {
         name: "GitHub Actions",
-        description: "CI/CD automation and workflow management",
+        description: "Automated checks before code goes live",
       },
       {
-        name: "Linux/Ubuntu",
-        description: "Server administration and command-line operations",
+        name: "Asterisk & SIP",
+        description: "Phone lines for KomoVoice on a BTCL SIP trunk",
       },
     ],
   },
 
   leadership: {
-    title: "Leadership & Business",
+    title: "Architecture & Product",
     description:
-      "Entrepreneurial skills, team leadership, and business development capabilities for driving organizational growth.",
+      "How I design systems and products, and how I work with the people who use them.",
     skills: [
       {
-        name: "Team Leadership",
-        description:
-          "Managing development teams and fostering collaborative culture",
+        name: "Product design",
+        description: "Deciding what to build from real shop owners' problems",
       },
       {
-        name: "Product Strategy",
-        description: "Defining product roadmaps and technical vision",
+        name: "System architecture",
+        description: "Multi-tenant SaaS with shop-level data isolation",
       },
       {
-        name: "Startup Development",
-        description: "Building companies from idea to market validation",
+        name: "Event-driven design",
+        description: "Events, queues and retries between products",
       },
       {
-        name: "Technical Architecture",
-        description: "Designing scalable systems and technology decisions",
+        name: "Provider adapters",
+        description: "Couriers, Meta and AI models behind swappable adapters",
       },
       {
-        name: "Client Relations",
-        description:
-          "Building partnerships and managing stakeholder expectations",
+        name: "Double-entry accounting",
+        description: "A cashbook with real-time profit inside AutoMate",
       },
       {
-        name: "Project Management",
-        description: "Agile methodologies and delivery coordination",
+        name: "AI-native development",
+        description: "Building with Claude Code agents across many repositories",
       },
       {
-        name: "Mentoring",
-        description: "Coaching junior developers and knowledge sharing",
+        name: "UI/UX design",
+        description: "Product screens and flows in Figma",
       },
       {
-        name: "Business Development",
-        description: "Growth strategies and market expansion initiatives",
+        name: "Client relations",
+        description: "Working directly with shop owners and local businesses",
       },
     ],
   },

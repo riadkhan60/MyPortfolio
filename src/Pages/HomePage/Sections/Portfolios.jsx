@@ -9,7 +9,7 @@ function Portfolios() {
         <SectionInfo>
           <SectionInfo.Subtitle>WHAT I&apos;M BUILDING</SectionInfo.Subtitle>
           <div className=" flex items-start justify-between">
-            <SectionInfo.Title>Current Projects & Ventures</SectionInfo.Title>
+            <SectionInfo.Title>The Qbexel ecosystem</SectionInfo.Title>
             <div>
               <div className=" button-swiper text-white">
                 <div className="swiper-button-prev-portfolio swiper-button-prev"></div>
@@ -18,9 +18,9 @@ function Portfolios() {
             </div>
           </div>
           <SectionInfo.Description>
-            From co-founding Qbexel to building AI-powered platforms like
-            Synapse Social, here&apos;s what I&apos;m currently working on and
-            the ventures driving my entrepreneurial journey.
+            Qbexel and the products I&apos;m building for online sellers, from
+            the first chat to a delivered order. Click any card to see what it
+            does and how it&apos;s built.
           </SectionInfo.Description>
         </SectionInfo>
         <Swipe />

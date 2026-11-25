@@ -3,7 +3,7 @@ function ContactMeItems() {
     <div className="mt-[95px] mb-[0px] md:mb-[200px]">
       <p className="mb-[10px] text-[14px] uppercase text-[#888]">Address</p>
       <h3 className=" font-regular mb-[60px] max-w-[300px] text-[30px] leading-[1.2] text-[#ddd]">
-        Tangail, Dhaka, Bangladesh
+        Dhaka, Bangladesh
       </h3>
       <p className="mb-[10px] text-[14px] uppercase text-[#888]">Phone</p>
       <h3 className=" font-regular mb-[60px] max-w-[300px] text-[30px] leading-[1.2] text-[#ddd]">

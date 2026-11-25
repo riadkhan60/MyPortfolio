@@ -5,11 +5,11 @@ function TypeWrite() {
     loop: {},
     words: [
       "MD Samiul Alam Khan",
-      "Startup Co-founder",
-      "Tech Strategist",
-      "AI Solution Architect",
-      "Full Stack Developer",
-      "Leading Synapse Social",
+      "Founder of Qbexel",
+      "Chief System Architect",
+      "AI Product Engineer",
+      "Full-Stack Developer",
+      "Building AutoMate",
     ],
     deleteSpeed: 20,
   });
