@@ -1,4 +1,4 @@
-import { FiTarget, FiZap, FiHeart, FiAward, FiUsers } from "react-icons/fi";
+import { FiTarget, FiZap, FiHeart, FiUsers } from "react-icons/fi";
 import GrantBadge from "./GrantBadge";
 
 function AboutDetailsSection() {
@@ -30,7 +30,11 @@ function AboutDetailsSection() {
       subtitle: "Cohort 4 (2026), after the Cohort 3 Founders' Lab (2025)",
     },
     {
-      icon: <FiAward className="h-6 w-6" />,
+      // NVIDIA's official member badge, used as NVIDIA made it (see Footer for the legal line).
+      officialBadge: {
+        src: "./badges/nvidia-inception-badge.svg",
+        alt: "NVIDIA Inception Program member",
+      },
       title: "NVIDIA Inception",
       subtitle: "Qbexel accepted in November 2026",
     },
@@ -88,7 +92,19 @@ function AboutDetailsSection() {
               className="group rounded-[12px] border border-borderColor p-[25px] transition-all duration-300 hover:border-[#ffffff55] max-md:p-[20px]"
             >
               <div className="flex flex-col items-center text-center">
-                {achievement.badge ? (
+                {achievement.officialBadge ? (
+                  <div className="mb-[15px] flex h-[50px] items-center justify-center max-md:mb-[12px] max-md:h-[45px]">
+                    {/* Full colour, height only (never stretched or recoloured), on a white tile.
+                        At 38/42px it stays smaller than the Qbexel logo on the project cards (40/52px). */}
+                    <span className="inline-flex rounded-[10px] bg-white">
+                      <img
+                        src={achievement.officialBadge.src}
+                        alt={achievement.officialBadge.alt}
+                        className="h-[38px] w-auto md:h-[42px]"
+                      />
+                    </span>
+                  </div>
+                ) : achievement.badge ? (
                   <div className="mb-[15px] flex h-[50px] items-center justify-center max-md:mb-[12px] max-md:h-[45px]">
                     <GrantBadge {...achievement.badge} />
                   </div>
