@@ -1,6 +1,6 @@
 import { IoLogoGithub, IoLogoLinkedin, IoLogoFacebook } from "react-icons/io";
 import { TbBrandUpwork } from "react-icons/tb";
-import { SiGmail } from "react-icons/si";
+import { MdEmail } from "react-icons/md";
 
 const navFooterItems = [
   {
@@ -24,9 +24,9 @@ const navFooterItems = [
     link: "https://www.upwork.com/freelancers/~01632a5e14cb22ea0b?mp_source=share",
   },
   {
-    name: "gmail",
-    element: <SiGmail />,
-    link: "mailto:khanriad60@gmail.com",
+    name: "email",
+    element: <MdEmail />,
+    link: "mailto:riad@qbexel.com",
   },
 ];
 

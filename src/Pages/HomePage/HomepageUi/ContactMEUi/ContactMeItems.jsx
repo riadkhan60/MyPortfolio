@@ -10,10 +10,10 @@ function ContactMeItems() {
         (+880) 179 502 4751
       </h3>
       <a
-        href="mailto:khanriad60@gmail.com"
+        href="mailto:riad@qbexel.com"
         className=" hover:border-white/40 border-b transition-all duration-300 ease-in-out border-white/20 text-[18px] text-[#ddd]"
       >
-        Khanriad60@gmail.com
+        riad@qbexel.com
       </a>
     </div>
   );

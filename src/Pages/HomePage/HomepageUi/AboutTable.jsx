@@ -22,9 +22,9 @@ function AboutTable() {
             />
             <AboutTableItem
               title={"Email"}
-              value={"khanriad60@gmail.com"}
+              value={"riad@qbexel.com"}
               type={"link"}
-              link={"mailto:khanriad60@gmail.com"}
+              link={"mailto:riad@qbexel.com"}
             />
             <AboutTableItem
               title={"LinkedIn"}

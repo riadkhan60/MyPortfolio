@@ -1,4 +1,5 @@
 import { FiTarget, FiZap, FiHeart, FiAward, FiUsers } from "react-icons/fi";
+import GrantBadge from "./GrantBadge";
 
 function AboutDetailsSection() {
   const detailSections = [
@@ -32,6 +33,24 @@ function AboutDetailsSection() {
       icon: <FiAward className="h-6 w-6" />,
       title: "NVIDIA Inception",
       subtitle: "Qbexel accepted in November 2026",
+    },
+    {
+      badge: {
+        mark: "./badges/elevenlabs.svg",
+        name: "ElevenLabs",
+        lines: ["Startup", "Grant"],
+      },
+      title: "ElevenLabs Startup Grant",
+      subtitle: "USD 4,850 for Qbexel (2026)",
+    },
+    {
+      badge: {
+        mark: "./badges/anthropic.svg",
+        name: "Anthropic",
+        lines: ["Claude", "Startup Grant"],
+      },
+      title: "Anthropic Claude Grant",
+      subtitle: "Claude Team plan credits and USD 1,000 in API credits (2026)",
     },
   ];
 
@@ -69,9 +88,15 @@ function AboutDetailsSection() {
               className="group rounded-[12px] border border-borderColor p-[25px] transition-all duration-300 hover:border-[#ffffff55] max-md:p-[20px]"
             >
               <div className="flex flex-col items-center text-center">
-                <div className="mb-[15px] flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-borderColor text-themeDarkshade transition-all duration-300 group-hover:border-[#ffffff55] group-hover:text-themeWhite max-md:mb-[12px] max-md:h-[45px] max-md:w-[45px]">
-                  {achievement.icon}
-                </div>
+                {achievement.badge ? (
+                  <div className="mb-[15px] flex h-[50px] items-center justify-center max-md:mb-[12px] max-md:h-[45px]">
+                    <GrantBadge {...achievement.badge} />
+                  </div>
+                ) : (
+                  <div className="mb-[15px] flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-borderColor text-themeDarkshade transition-all duration-300 group-hover:border-[#ffffff55] group-hover:text-themeWhite max-md:mb-[12px] max-md:h-[45px] max-md:w-[45px]">
+                    {achievement.icon}
+                  </div>
+                )}
                 <h4 className="mb-[8px] text-[18px] font-medium text-themeWhite max-md:mb-[6px] max-md:text-[16px]">
                   {achievement.title}
                 </h4>
