@@ -1,4 +1,4 @@
-import { FiTarget, FiZap, FiHeart, FiUsers } from "react-icons/fi";
+import { FiTarget, FiZap, FiHeart } from "react-icons/fi";
 import GrantBadge from "./GrantBadge";
 
 function AboutDetailsSection() {
@@ -25,7 +25,12 @@ function AboutDetailsSection() {
 
   const achievements = [
     {
-      icon: <FiUsers className="h-6 w-6" />,
+      // NSU Startups Next's own mark (blue on the white tile), same badge look as the grants.
+      badge: {
+        mark: "./badges/nsusn-mark.svg",
+        name: "NSU Startups Next",
+        lines: ["Flagship", "Cohort 4"],
+      },
       title: "NSU Startups Next Flagship",
       subtitle: "Cohort 4 (2026), after the Cohort 3 Founders' Lab (2025)",
     },
